@@ -14,7 +14,7 @@
 - Configure it
 
 ```jsx
-font_family AnonymicePro Nerd Font
+font_family FiraCode Nerd Font
 font_size 20
 modify_font baseline 110%
 window_border_width 1
