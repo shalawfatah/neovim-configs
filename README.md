@@ -12,7 +12,7 @@
 
 ```bash
 # TOGGLE PROMPT FUNCTION AND KEYBINDING
-toggle_prompt_style() {
+toggle_prompt() {
     if [ "$PS1" = "> " ]; then
         export PS1="$OLD_PS1"
     else
