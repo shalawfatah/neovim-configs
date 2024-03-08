@@ -2,32 +2,53 @@
 
 ### Preparation
 
-- Install FiraCode Nerd Font
+- Install [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip)
 - Check if you have `zsh` if not, install it, make it `default shell`
-- Use `starship` to change the terminal message
-- Install `type-head autocompletion` for `zsh`
+- Use [starship](https://starship.rs) to change the terminal prompt message
+- Install [auto-complete](https://github.com/marlonrichert/zsh-autocomplete) for `zsh`
+-- clone the above repo to to your root folder, `~/Repo`
+-- Copy this line in your `~/.zshrc`: `source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh`
 - Write `toggle_prompt` function in your shell
+
+```bash
+# TOGGLE PROMPT FUNCTION AND KEYBINDING
+toggle_prompt_style() {
+    if [ "$PS1" = "> " ]; then
+        export PS1="$OLD_PS1"
+    else
+        export OLD_PS1="$PS1"
+        export PS1="> "
+    fi
+}
+```
 
 ### Kitty Terminal
 
-- Install Kitty Terminal
-- Configure it
-
-```jsx
-font_family FiraCode Nerd Font
+- Install [Kitty](https://sw.kovidgoyal.net/kitty/) Terminal
+- Configure it as below in `~/.config/kitty/kitty.conf`
+```bash
+# FONT
+font_family FiraCode Nerd Font Mono
 font_size 20
 modify_font baseline 110%
+# modify_font cell_height 105%
+
+# BORDER
 window_border_width 1
 hide_window_decorations yes
-window_padding_width 16
+window_padding_width 40 16
+active_border_color #4169E1
+inactive_border_color #367588
 inactive_text_alpha 0.1
-background #282a36
+
+# COLORS
+background #282A36
 ```
 
 ### Neovim
 
-- Install `Neovim`
-- Install `LazyVim`
+- Install [Neovim](https://neovim.io/)
+- Install [LazyVim](https://www.lazyvim.org/)
 - write your `vim-options.lua`
 
 **Plugins to install**
@@ -53,7 +74,7 @@ background #282a36
 
 ### Commands to Run
 
-```jsx
+```bash
 source %
 TSUpdate
 Mason
