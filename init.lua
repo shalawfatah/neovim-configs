@@ -1,5 +1,8 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
+require("config/options")
+require("config/keymaps")
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
