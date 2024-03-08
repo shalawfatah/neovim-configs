@@ -49,7 +49,25 @@ background #282A36
 
 - Install [Neovim](https://neovim.io/)
 - Install [LazyVim](https://www.lazyvim.org/)
-- write your `vim-options.lua`
+- write your `keybindings` in `~/.config/nvim/lua/config/keymaps.lua` file
+```bash
+vim.api.nvim_set_keymap('n', '<leader><Enter>', [[:!node %<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>h', [[:nohl <CR>]], {})
+vim.api.nvim_set_keymap('n', '<C-s>', ':Silicon<CR>', {noremap = true})
+vim.api.nvim_set_keymap('v', '<C-s>', ':Silicon<CR>', {noremap = true})
+```
+- write your `options` in `~/.config/nvim/lua/config/options.lua`
+```bash
+vim.cmd("set expandtab")
+vim.cmd("set tabstop=2")
+vim.cmd("set softtabstop=2")
+vim.cmd("set shiftwidth=2")
+vim.cmd("set clipboard=unnamedplus")
+vim.cmd("set number")
+vim.o.signcolumn = "yes"
+vim.opt.fillchars = { eob = " " }
+vim.g.mapleader = " "
+```
 
 **Plugins to install**
 
