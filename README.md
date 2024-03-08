@@ -53,7 +53,7 @@ background #282A36
 
 **Plugins to install**
 
-```jsx
+```bash
 - autopair.lua
 - completions.lua
 - neo-tree.lua
