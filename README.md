@@ -3,10 +3,10 @@
 ### Preparation
 
 - Install [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip)
-- Check if you have `zsh` if not, install it, make it `default shell`
+- Check if you have `Zsh` if not, install it, make it `default shell`
 - Use [starship](https://starship.rs) to change the terminal prompt message
 - Install [auto-complete](https://github.com/marlonrichert/zsh-autocomplete) for `zsh`
--- clone the above repo to to your root folder, `~/Repo`
+- Clone the above repo to to your root folder, `~/Repo`
 -- Copy this line in your `~/.zshrc`: `source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh`
 - Write `toggle_prompt` function in your shell
 
@@ -54,11 +54,11 @@ background #282A36
 **Plugins to install**
 
 ```jsx
-- autopair.lua                // ()
-- completions.lua             // ...
-- neo-tree.lua                // file structure
-- nvim-web-devicons.lua       // icons
-- treesitter.lua              
+- autopair.lua
+- completions.lua
+- neo-tree.lua
+- nvim-web-devicons.lua
+- treesitter.lua
 - grapple.lua
 - noice-nvim.lua
 - sessions.lua
