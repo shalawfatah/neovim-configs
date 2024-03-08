@@ -5,5 +5,7 @@ return {
     { "<leader>as", ":ASToggle<CR>", desc = "Toggle auto-save" },
   },
   event = { "InsertLeave", "TextChanged" },
-  opts = {},
+  opts = {
+    enabled = false
+  },
 }

@@ -2,6 +2,7 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 require("config/options")
 require("config/keymaps")
+require("config/autocmds")
 
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
