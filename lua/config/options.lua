@@ -10,6 +10,6 @@ opt.softtabstop=2
 opt.shiftwidth=2
 opt.clipboard="unnamedplus"
 opt.number = true
-vim.o.signcolumn = "yes"
-vim.opt.fillchars = { eob = " " }
+opt.fillchars = { eob = " " }
 vim.g.mapleader = " "
+vim.o.signcolumn = "yes"
