@@ -7,7 +7,7 @@
 - Use [starship](https://starship.rs) to change the terminal prompt message
 - Install [auto-complete](https://github.com/marlonrichert/zsh-autocomplete) for `zsh`
 - Clone the above repo to to your root folder, `~/Repo`
--- Copy this line in your `~/.zshrc`: `source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh`
+- Copy this line in your `~/.zshrc`: `source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh`
 - Write `toggle_prompt` function in your shell
 
 ```bash
