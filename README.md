@@ -1,4 +1,4 @@
-# NEOVIM ENVIRONMENT CONFIGURATIOn
+# NEOVIM ENVIRONMENT CONFIGURATION
 
 ### Preparation
 
@@ -62,3 +62,4 @@ MasonInstall *-language-server
 ```
 
 ### Resources
+https://github.com/miraculusik/dotfiles/blob/main/.config/nvim/init.lua
