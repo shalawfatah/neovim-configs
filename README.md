@@ -82,5 +82,19 @@ MasonUpdate
 MasonInstall *-language-server
 ```
 
+### Keybindings
+| Modes                        | Operations in Insert Mode                                                                                                           |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Movements & Motions          | `h` left, `j` down, `k` up, `l` right                                                                                               |
+| Copy / Paste                 | `y` copy, `p` paste                                                                                                                  |
+| Delete / Cut                 | `d` delete, `x` cut                                                                                                                  |
+| Utilities                    | Repeat `.` , Undo `u`, Redo `<C-r>`, Change `c`, `q` quit, `w` save, `!` force                                                        |
+| Auxiliary                    | `x` character, `xx` line, `0-9` number, `$` end, `.` beginning, `{}` paragraph up/down , `p:` paragraph, `i` inner, `a` a        |
+| Speciality                   | `0` start of line, `_` before line starts, `e` end of word, `zz` centre view, `gg` top, `G` bottom, `%` go to opening/closing paragraph, `:!` run terminal commands |
+| Replace                      | `:%s/old/new/g`, `:s/old/new/`, `r`                                                                                                  |
+| Search / Find                | `:%s/pattern//g`, `, /`                                                                                                              |
+| Normal Ops in Insert Mode    | `Ctrl + W` delete word, `Ctrl + u` delete to beginning of line, `Ctrl + o` do normal mode in insert mode                             |
+
+
 ### Resources
 https://github.com/miraculusik/dotfiles/blob/main/.config/nvim/init.lua
