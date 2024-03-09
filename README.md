@@ -31,13 +31,12 @@ toggle_prompt() {
 font_family FiraCode Nerd Font Mono
 font_size 20
 modify_font baseline 110%
-# modify_font cell_height 105%
 
 # BORDER
 window_border_width 1
 hide_window_decorations yes
 window_padding_width 40 16
-active_border_color #4169E1
+active_border_color #15191f
 inactive_border_color #367588
 inactive_text_alpha 0.1
 
