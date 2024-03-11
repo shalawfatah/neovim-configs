@@ -10,5 +10,5 @@ vim.api.nvim_set_keymap("n", "<leader>bd", [[:!npm run build<CR>]], { noremap = 
 vim.api.nvim_set_keymap("n", "<leader>h", [[:nohl <CR>]], {})
 vim.api.nvim_set_keymap("n", "<C-s>", ":Silicon<CR>", { noremap = true })
 vim.api.nvim_set_keymap("v", "<C-s>", ":Silicon<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
-vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", {})

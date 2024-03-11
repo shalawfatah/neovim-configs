@@ -5,7 +5,8 @@
 local opt = vim.opt
 
 opt.expandtab = true
-opt.tabstop = 4
+opt.tabstop = 2
+opt.tabsoftstop = 2
 opt.clipboard = "unnamedplus"
 opt.number = true
 opt.fillchars = { eob = " " }
