@@ -34,14 +34,19 @@ modify_font baseline 110%
 
 # BORDER
 window_border_width 1
-hide_window_decorations yes
-window_padding_width 40 16
+window_padding_width 16
 active_border_color #15191f
-inactive_border_color #367588
-inactive_text_alpha 0.1
 
 # COLORS
-background #282A36
+background #313446
+macos_titlebar_color #313446
+inactive_text_alpha 0.1
+inactive_border_color #367588
+
+# BACKGROUND
+window_logo_path /Users/user/.config/kitty/origami.png
+window_logo_position center
+window_logo_alpha 0.1
 ```
 
 ### Neovim
