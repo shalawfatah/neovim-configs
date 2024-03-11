@@ -104,6 +104,7 @@ vim.g.mapleader = " "
 
 ```bash
 source %
+Lazy
 TSUpdate
 Mason
 MasonUpdate
