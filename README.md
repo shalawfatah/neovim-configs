@@ -55,10 +55,16 @@ window_logo_alpha 0.1
 - Install [LazyVim](https://www.lazyvim.org/)
 - write your `keybindings` in `~/.config/nvim/lua/config/keymaps.lua` file
 ```bash
-vim.api.nvim_set_keymap('n', '<leader><Enter>', [[:!node %<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>h', [[:nohl <CR>]], {})
-vim.api.nvim_set_keymap('n', '<C-s>', ':Silicon<CR>', {noremap = true})
-vim.api.nvim_set_keymap('v', '<C-s>', ':Silicon<CR>', {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>js", [[:!node %<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ts", [[:!tsc %<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader><Enter>", [[:!npm run start<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>dev", [[:!npm run dev<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>bd", [[:!npm run build<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>h", [[:nohl <CR>]], {})
+vim.api.nvim_set_keymap("n", "<C-s>", ":Silicon<CR>", { noremap = true })
+vim.api.nvim_set_keymap("v", "<C-s>", ":Silicon<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
+vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", {})
 ```
 - write your `options` in `~/.config/nvim/lua/config/options.lua`
 ```bash
