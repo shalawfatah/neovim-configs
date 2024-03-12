@@ -11,7 +11,7 @@ return {
                 vim.keymap.set("v", "<C-b>", ":Neotree filesystem toggle<CR>", {})
                 require("neo-tree").setup({
                         window = {
-                                width = 20,
+                                width = 30,
                         },
                 })
         end,
