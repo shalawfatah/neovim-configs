@@ -1,13 +1,13 @@
 return {
   {
-    'windwp/nvim-autopairs',
+    "windwp/nvim-autopairs",
     event = "InsertEnter",
-    opts = {}
+    opts = {},
   },
-  	{
-		"windwp/nvim-ts-autotag",
-		ft = { "html" },
-		lazy = true,
-		config = true,
-	},
+  {
+    "windwp/nvim-ts-autotag",
+    ft = { "html" },
+    lazy = true,
+    config = true,
+  },
 }

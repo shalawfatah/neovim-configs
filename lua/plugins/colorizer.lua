@@ -1,19 +1,19 @@
 return {
   {
     "norcalli/nvim-colorizer.lua",
-    dependencies = {'nvim-tree/nvim-web-devicons'},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require('lualine').setup({
+      require("lualine").setup({
         options = {
-          theme = 'auto'
-      }
-    })
-    end
+          theme = "auto",
+        },
+      })
+    end,
   },
-  	{
-		"brenoprata10/nvim-highlight-colors",
-		ft = { "css" },
-		config = true,
-		lazy = true,
-	},
+  {
+    "brenoprata10/nvim-highlight-colors",
+    ft = { "css" },
+    config = true,
+    lazy = true,
+  },
 }
