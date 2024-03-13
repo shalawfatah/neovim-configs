@@ -1,3 +1,4 @@
+-- `C-p` toggle telescope
 return {
   {
     "nvim-telescope/telescope.nvim",
