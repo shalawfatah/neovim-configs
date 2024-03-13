@@ -4,6 +4,8 @@
 
 -- VIM KEYBINDINGS
 vim.api.nvim_set_keymap("n", "<leader>h", [[:nohl <CR>]], {})
+vim.api.nvim_set_keymap("n", "<leader>pp", [[:bprevious<CR>]], {})
+vim.api.nvim_set_keymap("v", "<leader>pp", [[:bprevious<CR>]], {})
 -- JS/TS KEYBINDINGS
 vim.api.nvim_set_keymap("n", "<leader>js", [[:!node %<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>ts", [[:!tsc %<CR>]], { noremap = true, silent = true })
