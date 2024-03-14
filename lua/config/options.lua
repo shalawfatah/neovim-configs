@@ -13,3 +13,10 @@ opt.number = true
 opt.fillchars = { eob = " " }
 vim.g.mapleader = " "
 vim.o.signcolumn = "yes"
+
+-- FOLDING 
+vim.o.foldenable = true
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
