@@ -3,6 +3,9 @@ return {
     "hrsh7th/cmp-nvim-lsp",
   },
   {
+    "hrsh7th/cmp-buffer",
+  },
+  {
     "L3MON4D3/LuaSnip",
     version = "v2.*",
     build = "make install_jsregexp",
@@ -41,8 +44,5 @@ return {
         }),
       })
     end,
-  },
-  {
-    "hrsh7th/cmp-buffer",
   },
 }
