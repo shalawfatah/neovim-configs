@@ -82,22 +82,29 @@ vim.g.mapleader = " "
 **Plugins to install**
 
 ```bash
-- autopair.lua
-- completions.lua
-- neo-tree.lua
-- nvim-web-devicons.lua
-- treesitter.lua
-- grapple.lua
-- noice-nvim.lua
-- sessions.lua
-- vim-visual-multi.lua
-- catppuccin.lua
-- lsp-config.lua
-- none-ls.lua
-- telescope.lua
-- colorizer.lua
-- lualine.lua
-- nvim-silicon.lua
+auto-save.lua
+completions.lua
+neo-tree.lua
+nvim-web-devicons.lua
+trouble.lua
+autopair.lua
+gitlify.lua
+neoscroll.lua
+oil.lua
+ufo.lua
+catppuccin.lua
+lsp-config.lua
+noice-nvim.lua
+sessions.lua
+vim-visual-multi.lua
+colorizer.lua
+lualine.lua
+none-ls.lua
+telescope.lua
+comment.lua
+modes.lua
+nvim-silicon.lua
+treesitter.lua
 ```
 
 ### Commands to Run
@@ -123,7 +130,14 @@ MasonInstall *-language-server
 | Replace                      | `:%s/old/new/g`, `:s/old/new/`, `r`                                                                                                  |
 | Search / Find                | `:%s/pattern//g`, `, /`                                                                                                              |
 | Normal Ops in Insert Mode    | `Ctrl + W` delete word, `Ctrl + u` delete to beginning of line, `Ctrl + o` do normal mode in insert mode                             |
+### Features to be added
 
+- Live server
+- Sharing and Remote control
+- Markdown reader
+- Project-based colouring
+- Find word in entire project
+- Workspaces
 
 ### Resources
 https://github.com/miraculusik/dotfiles/blob/main/.config/nvim/init.lua
