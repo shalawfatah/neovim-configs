@@ -133,14 +133,14 @@ MasonInstall *-language-server
 | Normal Ops in Insert Mode    | `Ctrl + W` delete word, `Ctrl + u` delete to beginning of line, `Ctrl + o` do normal mode in insert mode                             |
 ### Features to be added
 
-[x] Live server
-[ ] Sharing and Remote control
-[x] Markdown reader
-[ ] Project and Workspace Management 
-[x] Search Word in entire project
-[ ] Learn about telescope
-[ ] Learn about Neovim, LazyVim
-[ ] Learn about Lua
+- [x] Live server
+- [ ] Sharing and Remote control
+- [x] Markdown reader
+- [ ] Project and Workspace Management 
+- [x] Search Word in entire project
+- [ ] Learn about telescope
+- [ ] Learn about Neovim, LazyVim
+- [ ] Learn about Lua
 
 ### Resources
 https://github.com/miraculusik/dotfiles/blob/main/.config/nvim/init.lua
