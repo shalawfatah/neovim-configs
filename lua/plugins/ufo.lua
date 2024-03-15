@@ -1,4 +1,14 @@
 return {
+  {
+  "luukvbaal/statuscol.nvim",
+    config = function()
+      require("statuscol").setup({
+      foldfunc = "builtin",
+      setopt = true,
+    })
+    end,
+},
+  {
   "kevinhwang91/nvim-ufo",
   dependencies = { "kevinhwang91/promise-async" },
   config = function()
@@ -20,4 +30,5 @@ return {
       end
     end)
   end,
+},
 }
