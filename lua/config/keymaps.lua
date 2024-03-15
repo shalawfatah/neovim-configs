@@ -24,4 +24,4 @@ key("v", "<C-b>", ":Neotree filesystem toggle<CR>", {})
 -- LSP KEYBINDINGS
 key("n", "K", vim.lsp.buf.hover, {})
 key("n", "gd", vim.lsp.buf.definition, {})
-key({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+key("n", "<leader>ca", vim.lsp.buf.code_action, {})
