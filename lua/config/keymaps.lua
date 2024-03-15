@@ -7,6 +7,7 @@ key("v", "<leader>pp", [[:bprevious<CR>]], {})
 
 -- JS/TS KEYBINDINGS
 key("n", "<leader>js", [[:!node %<CR>]], { noremap = true, silent = true })
+key("n", "<leader>jjs", [[:'<,'>w !node<CR>]], { noremap = true, silent = true })
 key("n", "<leader>ts", [[:!tsc %<CR>]], { noremap = true, silent = true })
 key("n", "<leader><Enter>", [[:!npm run start<CR>]], { noremap = true, silent = true })
 key("n", "<leader>dev", [[:!npm run dev<CR>]], { noremap = true, silent = true })
@@ -32,4 +33,9 @@ key("v", "<C-b>", ":Neotree filesystem toggle<CR>", {})
 key("n", "K", vim.lsp.buf.hover, {})
 key("n", "gd", vim.lsp.buf.definition, {})
 key("n", "<leader>ca", vim.lsp.buf.code_action, {})
+
+-- MARKDOWN PREVIEW
+key("n", "<leader>md", ":MarkdownPreview<CR>", {noremap = true, silent = true})
+key("n", "<leader>mdc", ":MarkdownPreviewStop<CR>", {noremap = true, silent = true})
+key("n", "<leader>mdt", ":MarkdownPreviewToggle<CR>", {noremap = true, silent = true})
 
