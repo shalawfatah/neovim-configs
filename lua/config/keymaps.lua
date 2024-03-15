@@ -39,3 +39,6 @@ key("n", "<leader>md", ":MarkdownPreview<CR>", {noremap = true, silent = true})
 key("n", "<leader>mdc", ":MarkdownPreviewStop<CR>", {noremap = true, silent = true})
 key("n", "<leader>mdt", ":MarkdownPreviewToggle<CR>", {noremap = true, silent = true})
 
+-- Live Server
+key("n", "<leader>live", ":LiveServerStart<CR>", {noremap = true, silent = true })
+key("n", "<leader>stop", ":LiveServerStop<CR>", {noremap = true, silent = true })

@@ -9,6 +9,7 @@
 - Clone the above repo to to your root folder, `~/Repo`
 - Copy this line in your `~/.zshrc`: `source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh`
 - Write `toggle_prompt` function in your shell
+- Install `ripgrep` for live search on `telescope` to work.
 
 ```bash
 # TOGGLE PROMPT FUNCTION AND KEYBINDING
