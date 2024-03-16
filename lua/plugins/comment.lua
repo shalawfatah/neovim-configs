@@ -1,5 +1,5 @@
--- `gcc` - Toggles the current line using linewise comment
--- `gbc` - Toggles the current line using blockwise comment
+-- COMMENTING AND COMMENTING OUT 
+-- `gcc` TOGGLE CURRENT LINE COMMENT, `gbc` TOGGLE CURRENT BLOCK COMMENT 
 
 return {
   "numToStr/Comment.nvim",

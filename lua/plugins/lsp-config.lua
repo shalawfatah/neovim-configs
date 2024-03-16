@@ -1,3 +1,5 @@
+-- LANGUAGE SERVER PROTOCOLS 
+
 return {
   {
     "williamboman/mason.nvim",
@@ -42,6 +44,10 @@ return {
         capabilities = capabilities,
       })
       lspconfig.tailwindcss.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.htmx.setup({
         capabilities = capabilities,
       })
    end,

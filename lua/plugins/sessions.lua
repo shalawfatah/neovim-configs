@@ -1,3 +1,5 @@
+-- SESSION MANAGEMENT 
+
 return {
     "rmagatti/auto-session",
     config = function()

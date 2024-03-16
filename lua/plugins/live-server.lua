@@ -1,3 +1,5 @@
+-- LIVE SERVER FOR HTML, CSS, JS 
+
 return {
   "barrett-ruth/live-server.nvim",
   config = function()

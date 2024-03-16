@@ -1,7 +1,10 @@
+-- WORKSPACES LISTS
+-- <leader>w TO CHECK REGISTERED WOKRSPACES
+
 return {
   "ahmedkhalf/project.nvim",
   config = function()
     require("project_nvim").setup({})
-    require('telescope').load_extension('projects')
-  end
+    require("telescope").load_extension("projects")
+  end,
 }

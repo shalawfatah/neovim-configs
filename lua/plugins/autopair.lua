@@ -1,3 +1,6 @@
+-- AUTO PAIR FOR BRACES, CURLY BRACES, ETC
+-- AUTO TAG FOR HTML 
+
 return {
   {
     "windwp/nvim-autopairs",

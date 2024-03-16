@@ -1,4 +1,5 @@
--- lazy.nvim
+-- BETTER NOTIFICATION SYSTEM 
+
 return {
   {
     "rcarriga/nvim-notify",

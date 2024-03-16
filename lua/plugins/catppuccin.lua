@@ -1,3 +1,5 @@
+-- CATPPUCCIN THEME FOR TERMINAL
+
 return {
   "catppuccin/nvim",
   name = "catppuccin",

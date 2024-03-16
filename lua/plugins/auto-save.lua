@@ -1,3 +1,5 @@
+-- AUTO SAVE FUNCTIONALITY
+
 return {
   "okuuva/auto-save.nvim",
   cmd = "ASToggle",

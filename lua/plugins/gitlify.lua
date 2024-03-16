@@ -1,3 +1,5 @@
+-- GIT SIGNS AND HISTORY
+
 return {
   {
     "tpope/vim-fugitive",
