@@ -1,6 +1,5 @@
 local key = vim.keymap.set
 
--- VIM KEYBINDINGS
 key("n", "<leader>h", [[:nohl <CR>]], {})
 key("n", "<leader>pp", [[:bprevious<CR>]], {})
 key("v", "<leader>pp", [[:bprevious<CR>]], {})
@@ -43,3 +42,10 @@ key("n", "<leader>mdt", ":MarkdownPreviewToggle<CR>", { noremap = true, silent =
 key("n", "<leader>live", ":LiveServerStart<CR>", { noremap = true, silent = true })
 key("n", "<leader>stop", ":LiveServerStop<CR>", { noremap = true, silent = true })
 
+-- TELESCOPE KEYBINDINGS
+key('n', '<C-p>', ':Telescope find_files<CR>', {})
+key('n', '<leader>fg', ':Telescope live_grep<CR>', {})
+key('n', '<leader>fb', ':Telescope buffers<CR>', {})
+key('n', '<leader>fh', ':Telescope help_tags<CR>', {})
+key('n', '<leader>u', ':Telescope undo_tree<CR>', {})
+key("n", "<space>fb", ":Telescope file_browser<CR>", { noremap = true })

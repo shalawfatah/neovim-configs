@@ -5,29 +5,12 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "debugloop/telescope-undo.nvim",
-      "nvim-telescope/telescope-project.nvim",
       {
         "nvim-telescope/telescope-fzf-native.nvim",
-        build =
-        "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+        build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
       },
     },
-    config = function()
-      local builtin = require("telescope.builtin")
-      vim.keymap.set("n", "<C-p>", builtin.find_files, {})
-      vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-      vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-      vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-      vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>")
-    end,
-  },
-  {
-    "LukasPietzschmann/telescope-tabs",
-    config = function()
-      require("telescope").load_extension("telescope-tabs")
-      require("telescope-tabs").setup({})
-    end,
-    dependencies = { "nvim-telescope/telescope.nvim" },
+    config = function() end,
   },
   { "nvim-telescope/telescope-symbols.nvim" },
   {
@@ -43,7 +26,7 @@ return {
       })
       require("telescope").load_extension("ui-select")
       require("telescope").load_extension("undo")
-      require("telescope").load_extension("project")
+      require("telescope").load_extension("file_browser")
     end,
   },
 }
