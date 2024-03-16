@@ -6,3 +6,44 @@ debug
 foo.*
 *.log
 data
+# Ignore build artifacts and compiled binaries
+*.o
+*.ko
+*.obj
+*.elf
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Ignore macOS metadata and resource forks
+.DS_Store
+._*
+
+# Ignore Windows thumbnail cache files
+Thumbs.db
+
+# Ignore Vim temporary files
+*.swp
+*.swo
+.*.swo
+.*.swp
+
+# Ignore logs
+*.log
+
+# Ignore environment-specific configuration files
+.env
+.env.local
+
+# Ignore sensitive or private files
+id_rsa
+id_rsa.pub
+config.ini
+
+# Ignore directories generated during the build process
+node_modules/
+venv/
+target/
+
