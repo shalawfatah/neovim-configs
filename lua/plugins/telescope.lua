@@ -4,7 +4,6 @@ return {
     tag = "0.1.6",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "debugloop/telescope-undo.nvim",
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -13,6 +12,7 @@ return {
     config = function() end,
   },
   { "nvim-telescope/telescope-symbols.nvim" },
+  { "debugloop/telescope-undo.nvim" },
   {
     "nvim-telescope/telescope-ui-select.nvim",
     config = function()
