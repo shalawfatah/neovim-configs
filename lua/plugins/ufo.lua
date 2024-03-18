@@ -1,4 +1,4 @@
--- CODE FOLDING 
+-- CODE FOLDING
 
 return {
   "kevinhwang91/nvim-ufo",
@@ -11,10 +11,10 @@ return {
       lineFoldingOnly = true,
     }
     require("ufo").setup({})
-    vim.keymap.set("n", "zR", ufo.openAllFolds)
-    vim.keymap.set("n", "zM", ufo.closeAllFolds)
-    vim.keymap.set("n", "zr", ufo.openFoldsExceptKinds)
-    vim.keymap.set("n", "zm", ufo.closeFoldsWith)
+    vim.keymap.set("n", "zr", ufo.openAllFolds)
+    vim.keymap.set("n", "zm", ufo.closeAllFolds)
+    vim.keymap.set("n", "zR", ufo.openFoldsExceptKinds)
+    vim.keymap.set("n", "zM", ufo.closeFoldsWith)
     vim.keymap.set("n", "K", function()
       local winid = ufo.peekFoldedLinesUnderCursor()
       if not winid then

@@ -1,11 +1,9 @@
--- LANGUAGE SERVER PROTOCOLS 
+-- LANGUAGE SERVER PROTOCOLS
 
 return {
   {
     "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup()
-    end,
+    config = true,
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -50,6 +48,6 @@ return {
       lspconfig.htmx.setup({
         capabilities = capabilities,
       })
-   end,
+    end,
   },
 }
