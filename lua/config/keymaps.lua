@@ -1,8 +1,10 @@
 local key = vim.keymap.set
 
 key("n", "<leader>h", [[:nohl <CR>]], {})
-key("n", "<leader>pp", [[:bprevious<CR>]], {})
-key("v", "<leader>pp", [[:bprevious<CR>]], {})
+key("n", "<leader>e", [[:bprevious <CR>]], {})
+key("n", "<leader>e", [[:bprevious <CR>]], {})
+key("v", "<leader>n", [[:bnext <CR>]], {})
+key("v", "<leader>n", [[:bnext <CR>]], {})
 
 -- JS/TS KEYBINDINGS
 key("n", "<leader>js", [[:!node %<CR>]], { noremap = true, silent = true })
@@ -25,8 +27,8 @@ key("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 key("v", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- FILE EXPLORER KEYBINDINGS
-key("n", "<C-b>", ":Neotree filesystem toggle<CR>", {})
-key("v", "<C-b>", ":Neotree filesystem toggle<CR>", {})
+key("n", "<leader>b", ":Neotree filesystem toggle<CR>", { noremap = true, silent = true })
+key("v", "<leader>b", ":Neotree filesystem toggle<CR>", { noremap = true, silent = true })
 
 -- LSP KEYBINDINGS
 key("n", "K", vim.lsp.buf.hover, {})
