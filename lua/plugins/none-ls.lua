@@ -6,7 +6,6 @@ return {
     null_ls.setup({
       sources = {
         null_ls.builtins.completion.luasnip,
-        null_ls.builtins.formatting.prettier,
         null_ls.builtins.diagnostics.hadolint, -- DOCKER LINTER
         null_ls.builtins.diagnostics.markdownlint,
         null_ls.builtins.diagnostics.mypy,
@@ -15,6 +14,7 @@ return {
         null_ls.builtins.diagnostics.sqlfluff,
         null_ls.builtins.diagnostics.staticcheck,
         null_ls.builtins.diagnostics.vint,
+        null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.astyle, -- "arduino", "c", "cpp", "cs", "java"
         null_ls.builtins.formatting.gofmt,

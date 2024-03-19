@@ -28,6 +28,24 @@ return {
           },
         },
       })
+      lspconfig.tsserver.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.html.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.svelte.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.sqlls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.tailwindcss.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.htmx.setup({
+        capabilities = capabilities,
+      })
     end,
   },
 }
