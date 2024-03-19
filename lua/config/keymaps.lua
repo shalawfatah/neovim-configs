@@ -2,9 +2,7 @@ local key = vim.keymap.set
 
 key("n", "<leader>h", [[:nohl <CR>]], {})
 key("n", "<leader>e", [[:bprevious <CR>]], {})
-key("n", "<leader>e", [[:bprevious <CR>]], {})
-key("v", "<leader>n", [[:bnext <CR>]], {})
-key("v", "<leader>n", [[:bnext <CR>]], {})
+key("n", "<leader>n", [[:bnext <CR>]], {})
 
 -- JS/TS KEYBINDINGS
 key("n", "<leader>js", [[:!node %<CR>]], { noremap = true, silent = true })
