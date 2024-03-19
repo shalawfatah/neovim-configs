@@ -8,7 +8,7 @@ key("v", "<leader>n", [[:bnext <CR>]], {})
 
 -- JS/TS KEYBINDINGS
 key("n", "<leader>js", [[:!node %<CR>]], { noremap = true, silent = true })
-key("n", "<leader>jjs", [[:'<,'>w !node<CR>]], { noremap = true, silent = true })
+key("n", "<leader>jj", [[:'<,'>w !node<CR>]], { noremap = true, silent = true })
 key("n", "<leader>ts", [[:!tsc %<CR>]], { noremap = true, silent = true })
 key("n", "<leader><Enter>", [[:!npm run start<CR>]], { noremap = true, silent = true })
 key("n", "<leader>dev", [[:!npm run dev<CR>]], { noremap = true, silent = true })

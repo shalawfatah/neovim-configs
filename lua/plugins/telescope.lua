@@ -10,7 +10,11 @@ return {
         "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
       },
     },
-    config = function() end,
+    config = function()
+      require("telescope").setup({
+        -- options
+      })
+    end,
   },
   { "nvim-telescope/telescope-symbols.nvim" },
   { "debugloop/telescope-undo.nvim" },
