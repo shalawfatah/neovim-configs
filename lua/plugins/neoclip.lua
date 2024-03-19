@@ -3,6 +3,6 @@
 
 return {
   "AckslD/nvim-neoclip.lua",
-  requires = { { "kkharji/sqlite.lua", module = "sqlite" } },
+  dependencies = { { "kkharji/sqlite.lua", module = "sqlite" } },
   config = true,
 }
