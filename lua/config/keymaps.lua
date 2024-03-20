@@ -29,9 +29,13 @@ key("n", "<leader>b", ":Neotree filesystem toggle<CR>", { noremap = true, silent
 key("v", "<leader>b", ":Neotree filesystem toggle<CR>", { noremap = true, silent = true })
 
 -- LSP KEYBINDINGS
-key("n", "K", vim.lsp.buf.hover, {})
-key("n", "gd", vim.lsp.buf.definition, {})
-key("n", "<leader>ca", vim.lsp.buf.code_action, {})
+key("n", "K", vim.lsp.buf.hover, {}) -- hover 
+key("n", "gd", vim.lsp.buf.definition, {}) -- where is the code defined
+key("n", "gt", vim.lsp.buf.type_definition, {}) -- what is the type of the code
+key("n", "<leader>ft", vim.lsp.buf.format, {}) -- what is the type of the code
+key("n", "<leader>ca", "<CMD>lua vim.lsp.buf.code_action()<CR>", {}) -- what actions can be done
+key("n", "<leader>rf", ":Telescope lsp_references<CR>", {}) -- where is the code referenced
+key("n", "<leader>rn", "<CMD> lua vim.lsp.buf.rename()<CR>", {}) -- rename the code throughout the project
 
 -- MARKDOWN PREVIEW
 key("n", "<leader>md", ":MarkdownPreview<CR>", { noremap = true, silent = true })
