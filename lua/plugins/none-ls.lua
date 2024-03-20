@@ -6,6 +6,7 @@ return {
     null_ls.setup({
       sources = {
         null_ls.builtins.completion.luasnip,
+        null_ls.builtins.diagnostics.buf,
         null_ls.builtins.diagnostics.hadolint, -- DOCKER LINTER
         null_ls.builtins.diagnostics.markdownlint,
         null_ls.builtins.diagnostics.mypy,

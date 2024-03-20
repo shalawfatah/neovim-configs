@@ -31,19 +31,10 @@ return {
       lspconfig.tsserver.setup({
         capabilities = capabilities,
       })
-      lspconfig.html.setup({
+      lspconfig.eslint.setup({
         capabilities = capabilities,
       })
-      lspconfig.svelte.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.sqlls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.tailwindcss.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.htmx.setup({
+      lspconfig.gopls.setup({
         capabilities = capabilities,
       })
     end,
