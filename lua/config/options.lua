@@ -10,6 +10,7 @@ opt.softtabstop = 2
 opt.shiftwidth = 2
 opt.clipboard = "unnamedplus"
 opt.number = true
+opt.relativenumber = true
 vim.g.mapleader = " "
 vim.o.signcolumn = "yes"
 

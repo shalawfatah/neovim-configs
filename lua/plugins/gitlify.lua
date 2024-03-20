@@ -8,11 +8,11 @@ return {
     config = function()
       require("gitsigns").setup({
         signs = {
-          add = { text = " ✢" },
-          change = { text = " ≈" },
-          delete = { text = " ✗" },
-          topdelete = { text = " ₸" },
-          changedelete = { text = " Ɖ" },
+          add = { text = " +" },
+          change = { text = " ~" },
+          delete = { text = " x" },
+          topdelete = { text = " i" },
+          changedelete = { text = " ≈" },
           untracked = { text = " ┆" },
         },
       })
