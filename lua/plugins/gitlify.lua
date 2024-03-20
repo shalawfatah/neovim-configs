@@ -11,7 +11,7 @@ return {
           add = { text = " +" },
           change = { text = " ~" },
           delete = { text = " x" },
-          topdelete = { text = " i" },
+          topdelete = { text = " *" },
           changedelete = { text = " ≈" },
           untracked = { text = " ┆" },
         },
