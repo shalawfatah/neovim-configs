@@ -16,7 +16,6 @@ return {
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.astyle, -- "arduino", "c", "cpp", "cs", "java"
-        null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.pint,
         null_ls.builtins.formatting.shfmt,
         null_ls.builtins.formatting.sqlfmt,

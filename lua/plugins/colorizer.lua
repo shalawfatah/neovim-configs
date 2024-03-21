@@ -12,4 +12,9 @@ return {
     "uga-rosa/ccc.nvim",
     config = true,
   },
+  {
+    "max397574/colortils.nvim",
+    cmd = "Colortils",
+    config = true,
+  },
 }

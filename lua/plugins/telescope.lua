@@ -17,6 +17,13 @@ return {
   },
   { "nvim-telescope/telescope-symbols.nvim" },
   { "debugloop/telescope-undo.nvim" },
+  { "nvim-telescope/telescope-media-files.nvim" },
+  { "gbrlsnchs/telescope-lsp-handlers.nvim" },
+  { "ghassan0/telescope-glyph.nvim" },
+  {
+    "tzachar/highlight-undo.nvim",
+    opts = {},
+  },
   {
     "nvim-telescope/telescope-ui-select.nvim",
     config = function()
@@ -31,6 +38,9 @@ return {
       require("telescope").load_extension("ui-select")
       require("telescope").load_extension("undo")
       require("telescope").load_extension("file_browser")
+      require("telescope").load_extension("media_files")
+      require("telescope").load_extension("lsp_handlers")
+      require("telescope").load_extension("glyph")
     end,
   },
 }
