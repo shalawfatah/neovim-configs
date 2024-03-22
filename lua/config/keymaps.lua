@@ -24,12 +24,9 @@ key("n", "<leader>ds", buf .. "document_symbol()<CR>", nor)            -- DECLAR
 key("n", "<leader>js", [[:!node %<CR>]], nor)                          -- RUN CURRENT JS FILE
 key("n", "<leader>ts", [[:!tsc %<CR>]], nor)                           -- RUN CURRENT TS FILE
 key("n", "<leader>go", [[:!go run %<CR>]], nor)                        -- RUN CURRENT GO FILE
--- Live Server
-key("n", "<leader>live", ":LiveServerStart<CR>", nor)                  -- START LIVE SERVER
-key("n", "<leader>stop", ":LiveServerStop<CR>", nor)                   -- STOP LIVE SERVER
 -- UTILITY KEYS
 key({ "n", "v" }, "<leader>o", ":Oil<CR>", nor)                        -- FILE EDITING
-key({ "n", "v" }, "<C-s>", ":Silicon<CR>", { noremap = true })         -- SCREENSHOT
+key({ "n", "v" }, "<C-s>", ":Silicon<CR>", nor)                        -- SCREENSHOT
 key({ "n", "v" }, "<leader>b", ":Neotree filesystem toggle<CR>", nor)  -- EXPLORER
 key("n", "<leader>md", ":MarkdownPreviewToggle<CR>", nor)              -- MARKDOWN TOGGLE
 key("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", nor) -- SHOW GIT LINE COMMIT OWNER
