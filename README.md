@@ -131,6 +131,7 @@ TSUpdate
 Mason
 MasonUpdate
 MasonInstall *-language-server
+<leader>fh for help
 ```
 
 ### Keybindings
