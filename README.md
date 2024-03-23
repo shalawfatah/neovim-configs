@@ -55,71 +55,123 @@ window_logo_alpha 0.1
 ### Neovim
 
 - Install [Neovim](https://neovim.io/)
-- Install [LazyVim](https://www.lazyvim.org/)
+- Install [Lazy.nvim](https://github.com/folke/lazy.nvim) package manager
 - write your `keybindings` in `~/.config/nvim/lua/config/keymaps.lua` file
 
 ```bash
-vim.api.nvim_set_keymap("n", "<leader>js", [[:!node %<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>ts", [[:!tsc %<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader><Enter>", [[:!npm run start<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>dev", [[:!npm run dev<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>bd", [[:!npm run build<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>h", [[:nohl <CR>]], {})
-vim.api.nvim_set_keymap("n", "<C-s>", ":Silicon<CR>", { noremap = true })
-vim.api.nvim_set_keymap("v", "<C-s>", ":Silicon<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
-vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", {})
+-- LOCAL VARIABLES
+local key = vim.keymap.set
+local opts = { noremap = true, silent = true }
+local buf = ":lua vim.lsp.buf."
+local duo = { "n", "v" }
+-- TELESCOPE KEYBINDINGS
+key("n", "<C-p>", ":Telescope find_files<CR>", opts)                             -- SHOW BUFFERS IN THE PROJECT
+key("n", "<leader>lg", ":Telescope live_grep<CR>", opts)                         -- LIVE SEARCH IN ENTIRE PROJECT
+key("n", "<leader>bf", ":Telescope buffers<CR>", opts)                           -- SHOW OPEN BUFFERS
+key("n", "<leader>h", ":Telescope help_tags<CR>", opts)                          -- SHOW HELP TAGS
+key("n", "<leader>u", ":Telescope undo<CR>", opts)                               -- SHOW UNDO TREE
+key("n", "<leader>w", ":Telescope projects<CR>", opts)                           -- SHOW PROJECTS
+key("n", "<leader>y", ":Telescope neoclip<CR>", opts)                            -- SHOW YANK TREE
+-- LSP KEYBINDINGS
+key("n", "K", buf .. "hover()<CR>", opts)                                        -- HOVER
+key("n", "gd", buf .. "definition()<CR>", opts)                                  -- WHERE IS THE CODE DEFINED
+key("n", "gt", buf .. "type_definition()<CR>", opts)                             -- WHAT IS THE TYPE OF THE CODE
+key("n", "<leader>ft", buf .. "format() <CR>", opts)                             -- FORMAT CODE
+key("n", "<leader>ca", buf .. "code_action()<CR>", opts)                         -- CODE ACTION IS AVAILABLE
+key("n", "<leader>rf", ":Telescope lsp_references<CR>", opts)                    -- WHERE IS THE CODE REFERENCED
+key("n", "<leader>rn", buf .. "rename()<CR>", opts)                              -- RENAME THE CODE IN ALL PLACES
+key("i", "<C-Enter>", buf .. "completion()<CR>", opts)                           -- CODE COMPLETION
+key("n", "<leader>ds", buf .. "document_symbol()<CR>", opts)                     -- DECLARED VARS, FUNCS, CLASSES
+-- COMMON LANGUAGE KEYBINDINGS
+key("n", "<leader>js", [[:!node %<CR>]], opts)                                   -- RUN CURRENT JS FILE
+key("n", "<leader>ts", [[:!tsc %<CR>]], opts)                                    -- RUN CURRENT TS FILE
+key("n", "<leader>go", [[:!go run %<CR>]], opts)                                 -- RUN CURRENT GO FILE
+-- LINE MOVER PLUGIN
+key("n", "<A-Down>", ":MoveLine 1<CR>", opts)                                    -- MOVE LINE UP
+key("n", "<A-Up>", ":MoveLine -1<CR>", opts)                                     -- MOVE LINE DOWN
+key("x", "<A-Up>", ":MoveBlock -1<CR>", opts)                                    -- MOVE BLOCK UP
+key("x", "<A-Down>", ":MoveBlock 1<CR>", opts)                                   -- MOVE BLOCK DOWN
+key("n", "<A-Left>", ":MoveWord -1<CR>", opts)                                   -- MOVE WORD LEFT
+key("n", "<A-Right>", ":MoveWord 1<CR>", opts)                                   -- MOVE WORD RIGHT
+-- GIT KEYBINDINGS
+key("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", opts)          -- SHOW GIT LINE COMMIT OWNER
+key(duo, "<leader>log", [[:<C-u>lua require("git-log").check_log()<CR>]], opts)  -- SHOW GIT LOG
+-- UTILITY KEYS
+key(duo, "<leader>o", ":Oil<CR>", opts)                                          -- FILE EDITING
+key(duo, "<C-s>", ":Silicon<CR>", opts)                                          -- SCREENSHOT
+key(duo, "<leader>b", ":Neotree filesystem toggle<CR>", opts)                    -- EXPLORER
+key("n", "<leader>md", ":MarkdownPreviewToggle<CR>", opts)                       -- MARKDOWN TOGGLE
+key("n", "<leader>hl", [[:nohl <CR>]], opts)                                     -- GET RID OF HIGHTLIGHTS
+key("n", "<S-Up>", [[:lua require("togglr").toggle_word()<CR>]], opts)           -- TOGGLE WORD
+key(duo, "<leader>tr", [[:Trim<CR>]], opts)   
 ```
 
 - write your `options` in `~/.config/nvim/lua/config/options.lua`
 
 ```bash
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set clipboard=unnamedplus")
-vim.cmd("set number")
-vim.o.signcolumn = "yes"
-vim.opt.fillchars = { eob = " " }
+local opt = vim.opt
+
+opt.expandtab = true
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.clipboard = "unnamedplus"
+opt.number = true
+opt.relativenumber = true
 vim.g.mapleader = " "
+vim.o.signcolumn = "yes"
+
+-- FOLDING 
+vim.o.foldenable = true
+vim.o.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
+vim.o.foldcolumn = '1'
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
 ```
 
 **Plugins to install**
 
 ```bash
-alpha.lua
-auto-save.lua
-catppuccin.lua
-colorizer.lua
-comment.lua
-completions.lua
-dressing.lua
-file-browser-telescope.lua
-gitlify.lua
-go-to-preview.lua
-live-server.lua
-livecode.lua
+action-hints.lua
+debugger.lua
 lsp-config.lua
-lualine.lua
-markdown-preview.lua
-modes.lua
-neoclip.lua
-neoscroll.lua
-neo-tree.lua
-none-ls.lua
 noice-nvim.lua
-nvim-silicon.lua
-nvim-web-devicons.lua
-oil.lua
-pairs-tags.lua
-project.lua
-telescope.lua
+text-case.lua
+alpha.lua
+dooku.lua
+lualine.lua
+none-ls.lua
 treesitter.lua
+auto-save.lua
+dressing.lua
+macros.lua
+nvim-silicon.lua
 treesitter-txobj.lua
+bigfile.lua
+file-browser-telescope.lua
+markdown-preview.lua
+nvim-web-devicons.lua
+trim.lua
+catppuccin.lua
+gitlify.lua
+modes.lua
+oil.lua
 ufo.lua
+colorizer.lua
+line-mover.lua
+neoclip.lua
+pairs-tags.lua
 url.lua
+comment.lua
+livecode.lua
+neoscroll.lua
+project.lua
 vim-visual-multi.lua
+completions.lua
+live-server.lua
+neo-tree.lua
+telescope.lua
+word-toggler.lua
 ```
 
 ### Commands to Run
@@ -147,17 +199,45 @@ MasonInstall *-language-server
 | Search / Find             | `:%s/pattern//g`, `, /`                                                                                                                                             |
 | Normal Ops in Insert Mode | `Ctrl + W` delete word, `Ctrl + u` delete to beginning of line, `Ctrl + o` do normal mode in insert mode                                                            |
 
-### Features to be added
-
-- [x] Live server
-- [ ] Sharing and Remote control
-- [x] Markdown reader
-- [ ] Project and Workspace Management
-- [x] Search Word in entire project
-- [ ] Learn about telescope
-- [ ] Learn about Neovim, LazyVim
-- [ ] Learn about Lua
-
+### Features
+The final config has these features provided by the mentioned plugins: 
+- [x] Fuzzy search for words, buffers, commands and projects/workspaces using `telescope`
+- [x] Undo history using telescope and undo extension 
+- [x] Yank history using telescope and yank plugin, using sqlite to persist yanks throughout different sessions
+- [x] Screenshot of full page and partial code using silicon 
+- [x] A custom look for the dashboard 
+- [x] A big file management plugin to work with large files 
+- [x] Color highlighting using three plugins 
+- [x] A beautiful lua status line 
+- [x] Formatting different languages using lua formatter 
+- [x] A completion engine using nvim-cmp
+- [x] Different LSP providers including JS,TS, Go and Python.
+- [x] Linters for JS, TS, Golang and Python using treesitter 
+- [x] Folding and unfolding using the nvim-ufo plugin 
+- [x] Text case plugin to immediately convert lower case to uppercase and other formats. 
+- [x] Markdown preview through a plugin 
+- [x] File explorer through neo-tree plugin 
+- [x] Auto pairs and tags using two different plugins 
+- [x] A smooth scrolling process using a plugin 
+- [x] A theme using Catppuccing theme, icons using web-devicons, different colors for different modes
+- [x] A file editor using oil nvim plugin 
+- [x] Pair programming and sharing code using a plugin 
+- [x] Live server using a plugin 
+- [x] Set up documentation using a plugin 
+- [x] Auto-save functionality 
+- [x] Ability to open URLs using a plugin 
+- [x] Multi-cursor using visual-multi plugin 
+- [x] Storing, re-using and managing macros using a plugin 
+- [x] Notification system using noice plugin 
+- [x] Git management, including logs, signs, conflicts and blame using different plugins 
+- [x] Improving vim.ui interface, including input and select using a plugin 
+- [x] Action and reference hints using a plugin 
+- [x] Moving lines and words up and down, left and right using a plugin 
+- [x] Trimming trailing spaces, last or first empty lines using a plugin 
+- [x] Toggling words to opposite, like `true` to `false` and `<` to `>`
+- [x] Debugger for Golang and Javascript 
+- [x] Commenting and un-commenting lines, blocks using a plugin 
+- [x] The ability to rename code throughout the project, find where they are dfined, and all their references throughout the project, along with symbol tree and other features like types and structure.
 ### Resources
 
 https://github.com/miraculusik/dotfiles/blob/main/.config/nvim/init.lua
