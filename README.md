@@ -8,9 +8,10 @@
 - Install [auto-complete](https://github.com/marlonrichert/zsh-autocomplete) for `zsh`
 - Clone the above repo to to your root folder, `~/Repo`
 - Copy this line in your `~/.zshrc`: `source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh`
-- Write `toggle_prompt` function in your shell
 - Install `ripgrep` for live search on `telescope` to work.
 - Install `make` for `fzf` on `telescope` on linux.
+- Install `delve` if you want to debug Go applications using neovim 
+- Write `toggle_prompt` function in your shell
 
 ```bash
 # TOGGLE PROMPT FUNCTION AND KEYBINDING
@@ -58,7 +59,7 @@ window_logo_alpha 0.1
 - Install [Lazy.nvim](https://github.com/folke/lazy.nvim) package manager
 - write your `keybindings` in `~/.config/nvim/lua/config/keymaps.lua` file
 
-```bash
+```lua
 -- LOCAL VARIABLES
 local key = vim.keymap.set
 local opts = { noremap = true, silent = true }
@@ -108,7 +109,7 @@ key(duo, "<leader>tr", [[:Trim<CR>]], opts)
 
 - write your `options` in `~/.config/nvim/lua/config/options.lua`
 
-```bash
+```lua
 local opt = vim.opt
 
 opt.expandtab = true
@@ -215,6 +216,7 @@ The final config has these features provided by the mentioned plugins:
 - [x] A beautiful lua status line 
 - [x] Formatting different languages using lua formatter 
 - [x] A completion engine using nvim-cmp
+- [x] Code snippets and suggestion using lsp and nvim-cmp 
 - [x] Different LSP providers including JS,TS, Go and Python.
 - [x] Linters for JS, TS, Golang and Python using treesitter 
 - [x] Folding and unfolding using the nvim-ufo plugin 
