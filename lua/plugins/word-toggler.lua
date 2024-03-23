@@ -4,7 +4,9 @@ return {
     register = "t",
     debug = false,
     values = {
-      ["good"] = "evil",
+      ["<"] = ">",
+      ["="] = "!=",
+      ["+"] = "-",
       ["even"] = "odd",
     },
   },
