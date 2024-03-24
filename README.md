@@ -93,6 +93,9 @@ window_logo_alpha 0.1
 - write your `keybindings` in `~/.config/nvim/lua/config/keymaps.lua` file
 
 ```lua
+-- LOCAL VARIABLES
+local key = vim.keymap.set
+local opts = { noremap = true, silent = true }
 local buf = ":lua vim.lsp.buf."
 local duo = { "n", "v" }
 -- TELESCOPE KEYBINDINGS
@@ -103,6 +106,7 @@ key("n", "<leader>h", ":Telescope help_tags<CR>", opts) -- SHOW HELP TAGS
 key("n", "<leader>u", ":Telescope undo<CR>", opts) -- SHOW UNDO TREE
 key("n", "<leader>w", ":Telescope projects<CR>", opts) -- SHOW PROJECTS
 key("n", "<leader>y", ":Telescope neoclip<CR>", opts) -- SHOW YANK TREE
+key(duo, "<leader>rr", [[:lua require('telescope').extensions.refactoring.refactors()<CR>]], opts)
 -- LSP KEYBINDINGS
 key("n", "K", buf .. "hover()<CR>", opts) -- HOVER
 key("n", "gd", buf .. "definition()<CR>", opts) -- WHERE IS THE CODE DEFINED
@@ -126,7 +130,18 @@ key("n", "<A-Left>", ":MoveWord -1<CR>", opts) -- MOVE WORD LEFT
 key("n", "<A-Right>", ":MoveWord 1<CR>", opts) -- MOVE WORD RIGHT
 -- GIT KEYBINDINGS
 key("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", opts) -- SHOW GIT LINE COMMIT OWNER
-key(duo, "<leader>log", [[:<C-u>lua require("git-log").check_log()<CR>]], opts) -- SHOW GIT LOG
+key(duo, "<C-g>", [[:LazyGit<CR>]], opts) -- LazyGit
+-- FOLDING KEYBINDINGS
+key("n", "zr", [[:lua require("ufo").openAllFolds()<CR>]], opts)
+key("n", "zm", [[:lua require("ufo").closeAllFolds()<CR>]], opts)
+key("n", "zR", [[:lua require("ufo").openFoldsExceptKinds()<CR>]], opts)
+key("n", "zM", [[:lua require("ufo").closeFoldsWith()<CR>]], opts)
+-- TOGGLE TERMINAL KEYBINDINGS
+key("n", "<C-h>", [[:ToggleTerm size=10 direction=horizontal name=horiz<CR>]], opts)
+key("n", "<C-v>", [[:ToggleTerm size=45 direction=vertical name=vertic<CR>]], opts)
+-- DEBUGGING KEYBINDINGS
+key("n", "<leader>dt", [[:lua require("dap").toggle_breakpoint()<CR>]], opts)
+key("n", "<leader>dc", [[:lua require("dap").continue()<CR>]], opts)
 -- UTILITY KEYS
 key(duo, "<leader>o", ":Oil<CR>", opts) -- FILE EDITING
 key(duo, "<C-s>", ":Silicon<CR>", opts) -- SCREENSHOT
@@ -134,17 +149,7 @@ key(duo, "<leader>b", ":Neotree filesystem toggle<CR>", opts) -- EXPLORER
 key("n", "<leader>md", ":MarkdownPreviewToggle<CR>", opts) -- MARKDOWN TOGGLE
 key("n", "<leader>hl", [[:nohl <CR>]], opts) -- GET RID OF HIGHTLIGHTS
 key("n", "<S-Up>", [[:lua require("togglr").toggle_word()<CR>]], opts) -- TOGGLE WORD
-key(duo, "<leader>tr", [[:Trim<CR>]], opts) -- TRIM TRAILING SPACE
-key(duo, "<C-g>", [[:LazyGit<CR>]], opts) -- LazyGit
-key(duo, "<leader>rr", [[:lua require('telescope').extensions.refactoring.refactors()<CR>]], opts)
-key("n", "zr", [[:lua require("ufo").openAllFolds()<CR>]], opts)
-key("n", "zm", [[:lua require("ufo").closeAllFolds()<CR>]], opts)
-key("n", "zR", [[:lua require("ufo").openFoldsExceptKinds()<CR>]], opts)
-key("n", "zM", [[:lua require("ufo").closeFoldsWith()<CR>]], opts)
-key("n", "<C-h>", [[:ToggleTerm size=10 direction=horizontal name=horiz<CR>]], opts)
-key("n", "<C-v>", [[:ToggleTerm size=45 direction=vertical name=vertic<CR>]], opts)
-key("n", "<leader>dt", [[:lua require("dap").toggle_breakpoint()<CR>]], opts)
-key("n", "<leader>dc", [[:lua require("dap").continue()<CR>]], opts)                                  -- LazyGit  
+key(duo, "<leader>tr", [[:Trim<CR>]], opts) -- TRIM TRAILING SPACE                                -- LazyGit  
 ```
 
 - write your `options` in `~/.config/nvim/lua/config/options.lua`
