@@ -10,5 +10,5 @@ return {
     require("refactoring").setup({})
     require("telescope").load_extension("refactoring")
   end,
-  key(duo, "<leader>rr", [[:lua reqfire('telescope').extensions.refactoring.refactors()<CR>]], opts)
+  key(duo, "<leader>rr", [[:lua require('telescope').extensions.refactoring.refactors()<CR>]], opts)
 }
