@@ -183,7 +183,6 @@ core.nvim
 dooku.nvim
 dressing.nvim
 friendly-snippets
-git-log.nvim
 gitsigns.nvim
 highlight-undo.nvim
 lazy.nvim
