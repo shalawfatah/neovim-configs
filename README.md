@@ -179,75 +179,76 @@ vim.o.foldlevelstart = 99
 **Plugins to install**
 
 ```bash
-Comment.nvim
-LuaSnip
-action-hints.nvim
-alpha-nvim
-auto-save.nvim
-bigfile.nvim
-catppuccin
-ccc.nvim
-cmp-buffer
-cmp-nvim-lsp
-cmp_luasnip
-colortils.nvim
-core.nvim
-dooku.nvim
-dressing.nvim
-friendly-snippets
-gitsigns.nvim
-highlight-undo.nvim
-lazy.nvim
-lazygit.nvim
-leap.nvim
-live-server.nvim
-livecode.nvim
-lualine.nvim
-markdown-preview.nvim
-mason-lspconfig.nvim
-mason.nvim
-modes.nvim
-move.nvim
-neo-tree.nvim
-neoscroll.nvim
-noice.nvim
-none-ls.nvim
-nui.nvim
-nvim-autopairs
-nvim-cmp
-nvim-colorizer.lua
-nvim-dap
-nvim-dap-go
-nvim-dap-ui
-nvim-lspconfig
-nvim-macros
-nvim-neoclip.lua
-nvim-nio
-nvim-notify
-nvim-silicon
-nvim-treesitter
-nvim-ts-autotag
-nvim-ufo
-nvim-web-devicons
-oil.nvim
-plenary.nvim
-project.nvim
-promise-async
-refactoring.nvim
-sqlite.lua
-telescope-file-browser.nvim
-telescope-fzf-native.nvim
-telescope-lsp-handlers.nvim
-telescope-symbols.nvim
-telescope-ui-select.nvim
-telescope-undo.nvim
-telescope.nvim
-text-case.nvim
-toggleterm.nvim
-togglr.nvim
-trim.nvim
-url-open
-vim-visual-multi
+Comment.nvim                    # comment lines, blocks
+LuaSnip                         # snippet engine
+action-hints.nvim               # definition, reference hints
+alpha-nvim                      # custom dashboard
+auto-save.nvim                  # auto-save functionality
+bigfile.nvim                    # opening big files better
+catppuccin                      # catppuccin theme
+ccc.nvim                        # create colors rgb, hsl, hex
+nvim-cmp                        # completion enigne
+cmp-buffer                      # helper for completion engine  
+cmp-nvim-lsp                    # connecter of lsp and completion engine
+cmp_luasnip                     # another helper for lsp and completion engine 
+colortils.nvim                  # color utility
+core.nvim                       # core nvim plugin 
+dooku.nvim                      # generate documentation 
+dressing.nvim                   # improve default vim.ui
+friendly-snippets               # a collection of snippets 
+gitsigns.nvim                   # git signs, add, subtract, change, etc 
+highlight-undo.nvim             # visualize undo action 
+lazy.nvim                       # lazy package manager 
+lazygit.nvim                    # lazy git connector 
+leap.nvim                       # easy motions for vim 
+live-server.nvim                # live server 
+livecode.nvim                   # share code 
+lualine.nvim                    # better status line 
+markdown-preview.nvim           # markdown preview 
+mason-lspconfig.nvim            # connector for mason package manager and lsp 
+mason.nvim                      # mason package manager 
+modes.nvim                      # different colors for different modes 
+move.nvim                       # move lines and blocks of code left, right, up, and down
+neo-tree.nvim                   # file explorer for neovim 
+neoscroll.nvim                  # smooth scrolling for neovim 
+noice.nvim                      # floating command line for neovim 
+none-ls.nvim                    # lsp helper 
+nui.nvim                        # better ui components for neovim 
+nvim-autopairs                  # auto-pair functionality 
+nvim-cmp                        # completion engine 
+nvim-colorizer.lua              # colorize code 
+nvim-dap                        # debug adapator protocol
+nvim-dap-go                     # debug adaptor for golang 
+nvim-dap-ui                     # neovim debug adaptor ui 
+nvim-lspconfig                  # language server protocol engine 
+nvim-macros                     # store, re-use macros 
+nvim-neoclip.lua                # store yanks and re-use them 
+nvim-nio                        # dependency for debugger  
+nvim-notify                     # better notification system
+nvim-silicon                    # screenshots of your code 
+nvim-treesitter                 # helper for lsp, completion and linting
+nvim-ts-autotag                 # auto tag for html 
+nvim-ufo                        # folding and unfolding your code 
+nvim-web-devicons               # web devicons for your neovim 
+oil.nvim                        # edit files like text in neovim 
+plenary.nvim                    # dependency for many plugins 
+project.nvim                    # project and workspace management 
+promise-async                   # folding and unfolding (ufo) plugin dependency  
+refactoring.nvim                # refactoring engine for nvim 
+sqlite.lua                      # sqlite database for neovim 
+telescope-file-browser.nvim     # file browser integration for telescope 
+telescope-fzf-native.nvim       # fuzzy search integration with telescope 
+telescope-lsp-handlers.nvim     # lsp handler for telescope 
+telescope-symbols.nvim          # symbol finder in telescope 
+telescope-ui-select.nvim        # select, input ui for telescope 
+telescope-undo.nvim             # undo tree for telescope 
+telescope.nvim                  # telescope, a window manager for neovim 
+text-case.nvim                  # change text for various cases, upper, lower, camel, etc
+toggleterm.nvim                 # toggle terminal, floating, horizontal, or vertical 
+togglr.nvim                     # toggle words to opposite, true to false < to >
+trim.nvim                       # trim trailing white space, last and first empty lines 
+url-open                        # open URLs in any file  
+vim-visual-multi                # multi-cursor operations made easy 
 ```
 
 ### Commands to Run
