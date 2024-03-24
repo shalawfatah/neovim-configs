@@ -42,4 +42,5 @@ key(duo, "<leader>b", ":Neotree filesystem toggle<CR>", opts)                   
 key("n", "<leader>md", ":MarkdownPreviewToggle<CR>", opts)                       -- MARKDOWN TOGGLE
 key("n", "<leader>hl", [[:nohl <CR>]], opts)                                     -- GET RID OF HIGHTLIGHTS
 key("n", "<S-Up>", [[:lua require("togglr").toggle_word()<CR>]], opts)           -- TOGGLE WORD
-key(duo, "<leader>tr", [[:Trim<CR>]], opts)                                      -- TRIM TRAILING SPACE & LINES
+key(duo, "<leader>tr", [[:Trim<CR>]], opts)                                      -- TRIM TRAILING SPACE
+key(duo, "<C-g>", [[:LazyGit<CR>]], opts)                                        -- LazyGit

@@ -1,8 +1,6 @@
--- GIT SIGNS AND HISTORY
+-- LazyGit, GIT SIGNS AND LOGS
 
 return {
-  { "tpope/vim-fugitive" },
-  { "akinsho/git-conflict.nvim", version = "*", config = true },
   {
     "kdheepak/lazygit.nvim",
     cmd = {
@@ -30,18 +28,6 @@ return {
           untracked = { text = " ┆" },
         },
       })
-    end,
-  },
-  {
-    "Rawnly/gist.nvim",
-    cmd = { "GistCreate", "GistCreateFromFile", "GistsList" },
-    config = true,
-  },
-  {
-    "samjwill/nvim-unception",
-    lazy = false,
-    init = function()
-      vim.g.unception_block_while_host_edits = true
     end,
   },
 }
