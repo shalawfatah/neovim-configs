@@ -1,6 +1,51 @@
 # NEOVIM ENVIRONMENT CONFIGURATION
 
-### Preparation
+### Features
+The final config has these features provided by the mentioned plugins: 
+
+- [x] Fuzzy search for words, buffers, commands and projects/workspaces using `telescope`
+- [x] Undo history using telescope and undo extension 
+- [x] Yank history using telescope and yank plugin, using sqlite to persist yanks throughout different sessions
+- [x] Integrated terminal using toggleterm plugin, with float, vertical and horizontal choices
+- [x] Screenshot of full page and partial code using silicon 
+- [x] A custom look for the dashboard 
+- [x] A big file management plugin to work with large files 
+- [x] Color highlighting using three plugins 
+- [x] A beautiful lua status line 
+- [x] Formatting different languages using lua formatter 
+- [x] A completion engine using nvim-cmp
+- [x] Code snippets and suggestion using lsp and nvim-cmp 
+- [x] Different LSP providers including JS,TS, Go and Python.
+- [x] Linters for JS, TS, Golang and Python using treesitter 
+- [x] Folding and unfolding using the nvim-ufo plugin 
+- [x] Text case plugin to immediately convert lower case to uppercase and other formats. 
+- [x] Markdown preview through a plugin 
+- [x] File explorer through neo-tree plugin 
+- [x] Auto pairs and tags using two different plugins 
+- [x] A smooth scrolling process using a plugin 
+- [x] A theme using Catppuccing theme, icons using web-devicons, different colors for different modes
+- [x] A file editor using oil nvim plugin 
+- [x] Pair programming and sharing code using a plugin 
+- [x] Live server using a plugin 
+- [x] Set up documentation using a plugin 
+- [x] Auto-save functionality 
+- [x] Ability to open URLs using a plugin 
+- [x] Multi-cursor using visual-multi plugin 
+- [x] Storing, re-using and managing macros using a plugin 
+- [x] Notification system using noice plugin 
+- [x] Git management, including logs, signs, conflicts and blame using different plugins 
+- [x] Improving vim.ui interface, including input and select using a plugin 
+- [x] Action and reference hints using a plugin 
+- [x] Moving lines and words up and down, left and right using a plugin 
+- [x] Trimming trailing spaces, last or first empty lines using a plugin 
+- [x] Toggling words to opposite, like `true` to `false` and `<` to `>`
+- [x] Debugger for Golang and Javascript 
+- [x] Commenting and un-commenting lines, blocks using a plugin 
+- [x] The ability to rename code throughout the project, find where they are dfined, and all their references throughout the project, along with symbol tree and other features like types and structure.
+- [x] The ability to refactor code using refactoring plugin. 
+
+
+### How To
 
 - Install [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip)
 - Check if you have `Zsh` if not, install it, make it `default shell`
@@ -12,19 +57,6 @@
 - Install `lazygit` if you want to use the lazygit plugin. 
 - Install `make` for `fzf` on `telescope` on linux.
 - Install `delve` if you want to debug Go applications using neovim 
-- Write `toggle_prompt` function in your shell
-
-```bash
-# TOGGLE PROMPT FUNCTION AND KEYBINDING
-toggle_prompt() {
-    if [ "$PS1" = "> " ]; then
-        export PS1="$OLD_PS1"
-    else
-        export OLD_PS1="$PS1"
-        export PS1="> "
-    fi
-}
-```
 
 ### Kitty Terminal
 
@@ -135,52 +167,76 @@ vim.o.foldlevelstart = 99
 **Plugins to install**
 
 ```bash
-action-hints.lua
-dooku.lua
-lualine.lua
-nvim-silicon.lua
-treesitter-txobj.lua
-alpha.lua
-dressing.lua
-macros.lua
-nvim-web-devicons.lua
-trim.lua
-auto-save.lua
-file-browser-telescope.lua
-markdown-preview.lua
-oil.lua
-ufo.lua
-bigfile.lua
-gitlify.lua
-modes.lua
-pairs-tags.lua
-ui-select-telescope.lua
-catppuccin.lua
-line-mover.lua
-neoclip.lua
-project.lua
-undo-telescope.lua
-colorizer.lua
-livecode.lua
-neoscroll.lua
-symbols-telescope.lua
-url.lua
-comment.lua
-live-server.lua
-neo-tree.lua
-telescope.lua
-vim-visual-multi.lua
-completions.lua
-lsp-config.lua
-noice-nvim.lua
-text-case.lua
-word-toggler.lua
-debugger.lua
-lsp-handlers-telescope.lua
-none-ls.lua
-treesitter.lua
-toggleterm.lua
-refactoring.lua
+Comment.nvim
+LuaSnip
+action-hints.nvim
+alpha-nvim
+auto-save.nvim
+bigfile.nvim
+catppuccin
+ccc.nvim
+cmp-buffer
+cmp-nvim-lsp
+cmp_luasnip
+colortils.nvim
+core.nvim
+dooku.nvim
+dressing.nvim
+friendly-snippets
+git-log.nvim
+gitsigns.nvim
+highlight-undo.nvim
+lazy.nvim
+lazygit.nvim
+live-server.nvim
+livecode.nvim
+lualine.nvim
+markdown-preview.nvim
+mason-lspconfig.nvim
+mason.nvim
+modes.nvim
+move.nvim
+neo-tree.nvim
+neoscroll.nvim
+noice.nvim
+none-ls.nvim
+nui.nvim
+nvim-autopairs
+nvim-cmp
+nvim-colorizer.lua
+nvim-dap
+nvim-dap-go
+nvim-dap-ui
+nvim-lspconfig
+nvim-macros
+nvim-neoclip.lua
+nvim-nio
+nvim-notify
+nvim-silicon
+nvim-treesitter
+nvim-treesitter-textobjects
+nvim-ts-autotag
+nvim-ufo
+nvim-web-devicons
+oil.nvim
+plenary.nvim
+project.nvim
+promise-async
+refactoring.nvim
+sqlite.lua
+telescope-file-browser.nvim
+telescope-fzf-native.nvim
+telescope-lsp-handlers.nvim
+telescope-symbols.nvim
+telescope-ui-select.nvim
+telescope-undo.nvim
+telescope.nvim
+text-case.nvim
+toggleterm.nvim
+togglr.nvim
+trim.nvim
+url-open
+vim-visual-multi
 ```
 
 ### Commands to Run
@@ -207,49 +263,6 @@ MasonInstall *-language-server
 | Replace                   | `:%s/old/new/g`, `:s/old/new/`, `r`                                                                                                                                 |
 | Search / Find             | `:%s/pattern//g`, `, /`                                                                                                                                             |
 | Normal Ops in Insert Mode | `Ctrl + W` delete word, `Ctrl + u` delete to beginning of line, `Ctrl + o` do normal mode in insert mode                                                            |
-
-### Features
-The final config has these features provided by the mentioned plugins: 
-- [x] Fuzzy search for words, buffers, commands and projects/workspaces using `telescope`
-- [x] Undo history using telescope and undo extension 
-- [x] Yank history using telescope and yank plugin, using sqlite to persist yanks throughout different sessions
-- [x] Integrated terminal using toggleterm plugin, with float, vertical and horizontal choices
-- [x] Screenshot of full page and partial code using silicon 
-- [x] A custom look for the dashboard 
-- [x] A big file management plugin to work with large files 
-- [x] Color highlighting using three plugins 
-- [x] A beautiful lua status line 
-- [x] Formatting different languages using lua formatter 
-- [x] A completion engine using nvim-cmp
-- [x] Code snippets and suggestion using lsp and nvim-cmp 
-- [x] Different LSP providers including JS,TS, Go and Python.
-- [x] Linters for JS, TS, Golang and Python using treesitter 
-- [x] Folding and unfolding using the nvim-ufo plugin 
-- [x] Text case plugin to immediately convert lower case to uppercase and other formats. 
-- [x] Markdown preview through a plugin 
-- [x] File explorer through neo-tree plugin 
-- [x] Auto pairs and tags using two different plugins 
-- [x] A smooth scrolling process using a plugin 
-- [x] A theme using Catppuccing theme, icons using web-devicons, different colors for different modes
-- [x] A file editor using oil nvim plugin 
-- [x] Pair programming and sharing code using a plugin 
-- [x] Live server using a plugin 
-- [x] Set up documentation using a plugin 
-- [x] Auto-save functionality 
-- [x] Ability to open URLs using a plugin 
-- [x] Multi-cursor using visual-multi plugin 
-- [x] Storing, re-using and managing macros using a plugin 
-- [x] Notification system using noice plugin 
-- [x] Git management, including logs, signs, conflicts and blame using different plugins 
-- [x] Improving vim.ui interface, including input and select using a plugin 
-- [x] Action and reference hints using a plugin 
-- [x] Moving lines and words up and down, left and right using a plugin 
-- [x] Trimming trailing spaces, last or first empty lines using a plugin 
-- [x] Toggling words to opposite, like `true` to `false` and `<` to `>`
-- [x] Debugger for Golang and Javascript 
-- [x] Commenting and un-commenting lines, blocks using a plugin 
-- [x] The ability to rename code throughout the project, find where they are dfined, and all their references throughout the project, along with symbol tree and other features like types and structure.
-- [x] The ability to refactor code using refactoring plugin. 
 
 ### Resources
 
