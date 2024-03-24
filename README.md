@@ -7,6 +7,7 @@ The final config has these features provided by the mentioned plugins:
 - [x] Undo history using telescope and undo extension 
 - [x] Yank history using telescope and yank plugin, using sqlite to persist yanks throughout different sessions
 - [x] Integrated terminal using toggleterm plugin, with float, vertical and horizontal choices
+- [x] Easy motion using Leap.nvim plugin
 - [x] Screenshot of full page and partial code using silicon 
 - [x] A custom look for the dashboard 
 - [x] A big file management plugin to work with large files 
@@ -198,6 +199,7 @@ gitsigns.nvim
 highlight-undo.nvim
 lazy.nvim
 lazygit.nvim
+leap.nvim
 live-server.nvim
 livecode.nvim
 lualine.nvim
