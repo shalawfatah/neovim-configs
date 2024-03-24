@@ -1,5 +1,3 @@
-local opts = { noremap = true, silent = true }
-
 return {
   "akinsho/toggleterm.nvim",
   version = "*",
@@ -13,6 +11,4 @@ return {
       },
     })
   end,
-  vim.keymap.set("n", "<C-h>", [[:ToggleTerm size=10 direction=horizontal name=horiz<CR>]], opts),
-  vim.keymap.set("n", "<C-v>", [[:ToggleTerm size=45 direction=vertical name=vertic<CR>]], opts),
 }

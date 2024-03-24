@@ -11,6 +11,5 @@ return {
         null_ls.builtins.hover.dictionary,
       },
     })
-    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
   end,
 }

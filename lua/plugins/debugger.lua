@@ -8,13 +8,9 @@ return {
   config = function()
     local dap = require("dap")
     local dapui = require("dapui")
-    local opts = { noremap = true, silent = true }
 
     require("dap-go").setup()
     require("dapui").setup()
-
-    vim.keymap.set("n", "<leader>dt", [[:lua require("dap").toggle_breakpoint()<CR>]], opts)
-    vim.keymap.set("n", "<leader>dc", [[:lua require("dap").continue()<CR>]], opts)
 
     dap.listeners.before.attach.dapui_config = function()
       dapui.open()
