@@ -180,6 +180,7 @@ lsp-handlers-telescope.lua
 none-ls.lua
 treesitter.lua
 toggleterm.lua
+refactoring.lua
 ```
 
 ### Commands to Run
@@ -248,6 +249,8 @@ The final config has these features provided by the mentioned plugins:
 - [x] Debugger for Golang and Javascript 
 - [x] Commenting and un-commenting lines, blocks using a plugin 
 - [x] The ability to rename code throughout the project, find where they are dfined, and all their references throughout the project, along with symbol tree and other features like types and structure.
+- [x] The ability to refactor code using refactoring plugin. 
+
 ### Resources
 
 https://github.com/miraculusik/dotfiles/blob/main/.config/nvim/init.lua
