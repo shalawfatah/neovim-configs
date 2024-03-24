@@ -4,6 +4,16 @@ return {
   { "tpope/vim-fugitive" },
   { "akinsho/git-conflict.nvim", version = "*", config = true },
   {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+  },
+  {
     "niuiic/git-log.nvim",
     dependencies = { "niuiic/core.nvim" },
   },
