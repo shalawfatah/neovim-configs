@@ -1,4 +1,4 @@
--- Generate documentation automatically, with :DookuAutoSetup, :DookuGenerate, and :DookuOpen
+-- GENERATE DOCUMENTATION AUTOMATICALLY, WITH :DookuAutoSetup, :DookuGenerate, AND :DookuOpen
 
 return {
   "Zeioth/dooku.nvim",

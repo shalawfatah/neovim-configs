@@ -1,4 +1,4 @@
--- FILE EXPLORER, <leader>b to open close the explorer 
+-- FILE EXPLORER, <leader>b TO OPEN CLOSE THE EXPLORER 
 
 return {
   "nvim-neo-tree/neo-tree.nvim",

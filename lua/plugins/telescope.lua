@@ -1,4 +1,4 @@
--- Telescope 
+-- TELESCOPE FOR BETTER NAVIGATION UI 
 
 return {
   {

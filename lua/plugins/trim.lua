@@ -1,5 +1,5 @@
--- Trim trailing space, first and last unused line 
--- Works with keybinding <leader>tr
+-- TRIM TRAILING SPACE, FIRST AND LAST UNUSED LINE 
+-- WORKS WITH KEYBINDING <leader>tr
 
 return {
   "cappyzawa/trim.nvim",

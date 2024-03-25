@@ -1,4 +1,4 @@
--- Better UI for Telescope 
+-- BETTER UI FOR TELESCOPE 
 
 return {
   "nvim-telescope/telescope-ui-select.nvim",

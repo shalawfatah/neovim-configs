@@ -1,4 +1,4 @@
--- CODE FOLDING, zm for fold/unfold
+-- CODE FOLDING, zm FOR fold/unfold
 
 return {
   "kevinhwang91/nvim-ufo",

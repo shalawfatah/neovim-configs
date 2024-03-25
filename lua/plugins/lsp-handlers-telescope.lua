@@ -1,3 +1,5 @@
+-- CONNECTION BETWEEN LSP AND TELESCOPE 
+
 return {
   "gbrlsnchs/telescope-lsp-handlers.nvim",
   config = function()

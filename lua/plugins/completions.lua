@@ -1,4 +1,4 @@
--- COMPLETIONS 
+-- COMPLETIONS, CODE SUGGESTION FOR DIFFERENT LANGUAGES 
 
 return {
   { "hrsh7th/cmp-nvim-lsp" },

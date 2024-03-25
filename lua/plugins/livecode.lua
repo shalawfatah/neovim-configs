@@ -1,4 +1,4 @@
--- Share code with others with, :LCStartSession, :LCJoin, :LCStop, and :LCShareBuffer
+-- SHARE CODE WITH OTHERS WITH, :LCStartSession, :LCJoin, :LCStop, AND :LCShareBuffer
 
 return {
   "jxm35/livecode.nvim",

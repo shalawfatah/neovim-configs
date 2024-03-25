@@ -47,6 +47,12 @@ key("n", "<C-v>", [[:ToggleTerm size=45 direction=vertical name=vertic<CR>]], op
 -- DEBUGGING KEYBINDINGS
 key("n", "<leader>dt", [[:lua require("dap").toggle_breakpoint()<CR>]], opts)
 key("n", "<leader>dc", [[:lua require("dap").continue()<CR>]], opts)
+-- TEXT CASES 
+key(duo, "<leader>txg", [[:TextCaseOpenTelescope<CR>]], opts) -- TEXT CASE OPEN TELESCOPE
+key(duo, "<leader>txu", [[:lua require('textcase').current_word('to_upper_case')<CR>]], opts)
+key(duo, "<leader>txl", [[:lua require('textcase').current_word('to_upper_case')<CR>]], opts)
+key(duo, "<leader>txs", [[:lua require('textcase').current_word('to_lower_case')<CR>]], opts)
+key(duo, "<leader>txd", [[:lua require('textcase').current_word('to_lower_case')<CR>]], opts)
 -- UTILITY KEYS
 key(duo, "<leader>o", ":Oil<CR>", opts) -- FILE EDITING
 key(duo, "<C-s>", ":Silicon<CR>", opts) -- SCREENSHOT

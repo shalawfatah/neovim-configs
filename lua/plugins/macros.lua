@@ -1,4 +1,4 @@
--- Manage, store and re-use macros 
+-- MANAGE, STORE AND RE-USE MACROS 
 
 return {
   "kr40/nvim-macros",

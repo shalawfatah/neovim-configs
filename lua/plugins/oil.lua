@@ -1,5 +1,5 @@
 -- EXPLORE, ADD, DELETE, RENAME BUFFERS LIKE VIM LINES
--- Use <leader>o to open the explorer, - to move one directory up 
+-- USE <leader>o TO OPEN THE EXPLORER, - TO MOVE ONE DIRECTORY UP 
 
 return {
   "stevearc/oil.nvim",

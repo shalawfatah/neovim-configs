@@ -1,5 +1,5 @@
--- Toggle common words, like true, false 
--- Works with keybinding Shift + Up arrow
+-- TOGGLE COMMON WORDS, LIKE true, false 
+-- WORKS WITH KEYBINDING SHIFT + Up ARROW
 
 return {
   "elentok/togglr.nvim",
@@ -10,12 +10,12 @@ return {
       ["<"] = ">",
       ["="] = "!=",
       ["+"] = "-",
-      ["even"] = "odd",
-      ["true"] = "false",
       ["=="] = "!=",
       ["<="] = ">=",
       ["+="] = "-=",
+      ["true"] = "false",
       ["on"] = "off",
+      ["even"] = "odd",
     },
   },
 }

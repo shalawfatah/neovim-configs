@@ -1,5 +1,5 @@
--- Move and leap around visible parts of your file 
--- Use s then determine the first two letters of the word you are moving to 
+-- MOVE AND LEAP AROUND VISIBLE PARTS OF YOUR FILE 
+-- USE s THEN DETERMINE THE FIRST TWO LETTERS OF THE WORD YOU ARE MOVING TO 
 
 return {
   "ggandor/leap.nvim",

@@ -1,4 +1,4 @@
--- See where your code is defined ⊛, and how many references does it have ↱%s 
+-- SEE WHERE YOUR CODE IS DEFINED ⊛, AND HOW MANY REFERENCES DOES IT HAVE ↱%s 
 
 return {
   "roobert/action-hints.nvim",

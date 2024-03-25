@@ -1,4 +1,4 @@
--- Undo using telescope 
+-- UNDO USING TELESCOPE 
 
 return {
   {

@@ -1,3 +1,5 @@
+-- Lazy.nvim PACKAGE MANAGER CONFIGURATION
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 require("config/options")

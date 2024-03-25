@@ -1,4 +1,5 @@
 -- AUTO SAVE FUNCTIONALITY
+-- USE <leader>as TO TOGGLE AUTO-SAVE FUNCTIONALITY
 
 return {
   "okuuva/auto-save.nvim",

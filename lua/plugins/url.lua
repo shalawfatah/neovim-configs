@@ -1,4 +1,4 @@
--- Make URLs clickable 
+-- MAKE URLs CLICKABLE 
 
 return {
   "sontungexpt/url-open",

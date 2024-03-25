@@ -1,5 +1,5 @@
--- Moves lines, blocks of code up and down 
--- line [normal mode] alt + Up/Down arrow, block [visual mode] alt + Up/Down arrow
+-- MOVES LINES, BLOCKS OF CODE UP AND DOWN 
+-- LINE [normal mode] alt + Up/Down ARROW, BLOCK [visual mode] alt + Up/Down ARROW
 
 return {
   "hinell/move.nvim",

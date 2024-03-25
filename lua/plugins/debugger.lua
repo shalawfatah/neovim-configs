@@ -1,3 +1,5 @@
+-- DEBUGGER 
+
 return {
   "mfussenegger/nvim-dap",
   dependencies = {
