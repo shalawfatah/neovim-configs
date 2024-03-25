@@ -20,7 +20,6 @@ The final config has these features provided by the mentioned plugins:
 - [x] Different LSP providers including JS,TS, Go and Python.
 - [x] Linters for JS, TS, Golang and Python using treesitter 
 - [x] Folding and unfolding using the nvim-ufo plugin 
-- [x] Text case plugin to immediately convert lower case to uppercase and other formats. 
 - [x] Markdown preview through a plugin 
 - [x] File explorer through neo-tree plugin 
 - [x] Auto pairs and tags using two different plugins 
