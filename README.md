@@ -44,6 +44,7 @@ The final config has these features provided by the mentioned plugins:
 - [x] Commenting and un-commenting lines, blocks using a plugin 
 - [x] The ability to rename code throughout the project, find where they are dfined, and all their references throughout the project, along with symbol tree and other features like types and structure.
 - [x] The ability to refactor code using refactoring plugin. 
+- [x] Marking and demakring files have better UI experience with mark column icons. 
 - [x] The functionality and keymap of every plugin is written on top of the plugin 
 
 
@@ -201,6 +202,7 @@ live-server.nvim                # live server
 livecode.nvim                   # share code 
 lualine.nvim                    # better status line 
 markdown-preview.nvim           # markdown preview 
+marks.nvim                      # giving better marks experience with UI and keybindings
 mason-lspconfig.nvim            # connector for mason package manager and lsp 
 mason.nvim                      # mason package manager 
 modes.nvim                      # different colors for different modes 
