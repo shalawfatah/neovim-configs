@@ -1,4 +1,5 @@
--- FILE EXPLORER
+-- FILE EXPLORER, <leader>b to open close the explorer 
+
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",

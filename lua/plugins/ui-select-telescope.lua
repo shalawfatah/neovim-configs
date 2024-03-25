@@ -1,3 +1,5 @@
+-- Better UI for Telescope 
+
 return {
   "nvim-telescope/telescope-ui-select.nvim",
   config = function()

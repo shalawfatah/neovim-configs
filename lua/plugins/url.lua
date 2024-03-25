@@ -1,3 +1,5 @@
+-- Make URLs clickable 
+
 return {
   "sontungexpt/url-open",
   event = "VeryLazy",

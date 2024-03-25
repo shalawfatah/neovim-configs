@@ -1,3 +1,5 @@
+-- CUSTOMIZE DASHBOARD 
+
 return {
   "goolord/alpha-nvim",
   event = "VimEnter",

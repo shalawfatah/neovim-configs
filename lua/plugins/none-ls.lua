@@ -1,4 +1,5 @@
 -- FORMATTERS, LINTERS, COMPLETIONS
+
 return {
   "nvimtools/none-ls.nvim",
   config = function()

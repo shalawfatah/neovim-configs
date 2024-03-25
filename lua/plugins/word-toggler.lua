@@ -1,3 +1,6 @@
+-- Toggle common words, like true, false 
+-- Works with keybinding Shift + Up arrow
+
 return {
   "elentok/togglr.nvim",
   opts = {
@@ -8,6 +11,11 @@ return {
       ["="] = "!=",
       ["+"] = "-",
       ["even"] = "odd",
+      ["true"] = "false",
+      ["=="] = "!=",
+      ["<="] = ">=",
+      ["+="] = "-=",
+      ["on"] = "off",
     },
   },
 }

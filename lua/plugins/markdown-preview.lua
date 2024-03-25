@@ -1,4 +1,5 @@
--- MARKDOWN LIVE PREVIEW
+-- MARKDOWN LIVE PREVIEW, <leader>md to toggle preview 
+
 return {
   "iamcco/markdown-preview.nvim",
   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },

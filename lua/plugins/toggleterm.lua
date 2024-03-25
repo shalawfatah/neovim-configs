@@ -1,3 +1,5 @@
+-- Open termianls in float: Ctrl + \, horizontal: Ctrl + h and vertical: Ctrl + v ways 
+
 return {
   "akinsho/toggleterm.nvim",
   version = "*",

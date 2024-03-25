@@ -1,3 +1,5 @@
+-- Manage, store and re-use macros 
+
 return {
   "kr40/nvim-macros",
   cmd = {"MacroSave", "MacroYank", "MacroSelect", "MacroDelete"},

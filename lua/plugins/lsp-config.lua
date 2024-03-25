@@ -1,4 +1,5 @@
 -- LANGUAGE SERVER PROTOCOLS
+
 return {
   {
     "williamboman/mason.nvim",

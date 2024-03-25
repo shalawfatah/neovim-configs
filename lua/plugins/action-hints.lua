@@ -1,3 +1,5 @@
+-- See where your code is defined ⊛, and how many references does it have ↱%s 
+
 return {
   "roobert/action-hints.nvim",
   config = function()

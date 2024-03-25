@@ -1,3 +1,5 @@
+-- Undo using telescope 
+
 return {
   {
     "debugloop/telescope-undo.nvim",

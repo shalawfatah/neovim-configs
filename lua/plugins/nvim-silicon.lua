@@ -1,3 +1,5 @@
+-- TAKE SCREENSHOTS OF YOUR CODE, ALL OR IN PART: <C-s>
+
 return {
   "michaelrommel/nvim-silicon",
   lazy = true,
