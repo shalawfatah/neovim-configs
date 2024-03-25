@@ -15,8 +15,8 @@ vim.g.mapleader = " "
 vim.o.signcolumn = "yes"
 
 -- FOLDING 
-vim.o.foldenable = true
-vim.o.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
-vim.o.foldcolumn = '1'
-vim.o.foldlevel = 99
-vim.o.foldlevelstart = 99
+opt.foldenable = true
+opt.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
+opt.foldcolumn = '1'
+opt.foldlevel = 99
+opt.foldlevelstart = 99

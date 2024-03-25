@@ -133,11 +133,6 @@ key("n", "<A-Right>", ":MoveWord 1<CR>", opts) -- MOVE WORD RIGHT
 -- GIT KEYBINDINGS
 key("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", opts) -- SHOW GIT LINE COMMIT OWNER
 key(duo, "<C-g>", [[:LazyGit<CR>]], opts) -- LazyGit
--- FOLDING KEYBINDINGS
-key("n", "zr", [[:lua require("ufo").openAllFolds()<CR>]], opts)
-key("n", "zm", [[:lua require("ufo").closeAllFolds()<CR>]], opts)
-key("n", "zR", [[:lua require("ufo").openFoldsExceptKinds()<CR>]], opts)
-key("n", "zM", [[:lua require("ufo").closeFoldsWith()<CR>]], opts)
 -- TOGGLE TERMINAL KEYBINDINGS
 key("n", "<C-h>", [[:ToggleTerm size=10 direction=horizontal name=horiz<CR>]], opts)
 key("n", "<C-v>", [[:ToggleTerm size=45 direction=vertical name=vertic<CR>]], opts)
