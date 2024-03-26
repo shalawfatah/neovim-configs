@@ -267,7 +267,7 @@ MasonInstall *-language-server
 | **Normal Ops in Insert Mode**  |  |                                          |
 |                | `Ctrl + w`       | Delete word                              |
 |                | `Ctrl + u`       | Delete to beginning of line              |
-|                | `Ctrl + o`       | Do normal mode in insert mode for one operation |
+|                | `Ctrl + o`       | Normal mode in insert mode - 1 operation |
 |                | `Ctrl + d/t`     | Indent                                   |
 | **Registers**  |                  |                                          |
 |                | `:reg`           | Show registers content                   |
