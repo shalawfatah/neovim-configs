@@ -22,10 +22,6 @@ key("n", "<leader>rf", ":Telescope lsp_references<CR>", opts) -- WHERE IS THE CO
 key("n", "<leader>rn", buf .. "rename()<CR>", opts) -- RENAME THE CODE IN ALL PLACES
 key("i", "<C-Enter>", buf .. "completion()<CR>", opts) -- CODE COMPLETION
 key("n", "<leader>ds", buf .. "document_symbol()<CR>", opts) -- DECLARED VARS, FUNCS, CLASSES
--- COMMON LANGUAGE KEYBINDINGS
-key("n", "<leader>js", [[:!node %<CR>]], opts) -- RUN CURRENT JS FILE
-key("n", "<leader>ts", [[:!tsc %<CR>]], opts) -- RUN CURRENT TS FILE
-key("n", "<leader>go", [[:!go run %<CR>]], opts) -- RUN CURRENT GO FILE
 -- LINE MOVER PLUGIN
 key("n", "<A-Down>", ":MoveLine 1<CR>", opts) -- MOVE LINE UP
 key("n", "<A-Up>", ":MoveLine -1<CR>", opts) -- MOVE LINE DOWN

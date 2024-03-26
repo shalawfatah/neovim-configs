@@ -94,84 +94,7 @@ window_logo_alpha 0.1
 - Install [Neovim](https://neovim.io/)
 - Install [Lazy.nvim](https://github.com/folke/lazy.nvim) package manager
 - write your `keybindings` in `~/.config/nvim/lua/config/keymaps.lua` file
-
-```lua
--- LOCAL VARIABLES
-local key = vim.keymap.set
-local opts = { noremap = true, silent = true }
-local buf = ":lua vim.lsp.buf."
-local duo = { "n", "v" }
--- TELESCOPE KEYBINDINGS
-key("n", "<C-p>", ":Telescope find_files<CR>", opts) -- SHOW BUFFERS IN THE PROJECT
-key("n", "<leader>lg", ":Telescope live_grep<CR>", opts) -- LIVE SEARCH IN ENTIRE PROJECT
-key("n", "<leader>bf", ":Telescope buffers<CR>", opts) -- SHOW OPEN BUFFERS
-key("n", "<leader>h", ":Telescope help_tags<CR>", opts) -- SHOW HELP TAGS
-key("n", "<leader>u", ":Telescope undo<CR>", opts) -- SHOW UNDO TREE
-key("n", "<leader>w", ":Telescope projects<CR>", opts) -- SHOW PROJECTS
-key("n", "<leader>y", ":Telescope neoclip<CR>", opts) -- SHOW YANK TREE
-key(duo, "<leader>rr", [[:lua require('telescope').extensions.refactoring.refactors()<CR>]], opts)
--- LSP KEYBINDINGS
-key("n", "K", buf .. "hover()<CR>", opts) -- HOVER
-key("n", "gd", buf .. "definition()<CR>", opts) -- WHERE IS THE CODE DEFINED
-key("n", "gt", buf .. "type_definition()<CR>", opts) -- WHAT IS THE TYPE OF THE CODE
-key("n", "<leader>ft", buf .. "format() <CR>", opts) -- FORMAT CODE
-key("n", "<leader>ca", buf .. "code_action()<CR>", opts) -- CODE ACTION IS AVAILABLE
-key("n", "<leader>rf", ":Telescope lsp_references<CR>", opts) -- WHERE IS THE CODE REFERENCED
-key("n", "<leader>rn", buf .. "rename()<CR>", opts) -- RENAME THE CODE IN ALL PLACES
-key("i", "<C-Enter>", buf .. "completion()<CR>", opts) -- CODE COMPLETION
-key("n", "<leader>ds", buf .. "document_symbol()<CR>", opts) -- DECLARED VARS, FUNCS, CLASSES
--- COMMON LANGUAGE KEYBINDINGS
-key("n", "<leader>js", [[:!node %<CR>]], opts) -- RUN CURRENT JS FILE
-key("n", "<leader>ts", [[:!tsc %<CR>]], opts) -- RUN CURRENT TS FILE
-key("n", "<leader>go", [[:!go run %<CR>]], opts) -- RUN CURRENT GO FILE
--- LINE MOVER PLUGIN
-key("n", "<A-Down>", ":MoveLine 1<CR>", opts) -- MOVE LINE UP
-key("n", "<A-Up>", ":MoveLine -1<CR>", opts) -- MOVE LINE DOWN
-key("x", "<A-Up>", ":MoveBlock -1<CR>", opts) -- MOVE BLOCK UP
-key("x", "<A-Down>", ":MoveBlock 1<CR>", opts) -- MOVE BLOCK DOWN
-key("n", "<A-Left>", ":MoveWord -1<CR>", opts) -- MOVE WORD LEFT
-key("n", "<A-Right>", ":MoveWord 1<CR>", opts) -- MOVE WORD RIGHT
--- GIT KEYBINDINGS
-key("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", opts) -- SHOW GIT LINE COMMIT OWNER
-key(duo, "<C-g>", [[:LazyGit<CR>]], opts) -- LazyGit
--- TOGGLE TERMINAL KEYBINDINGS
-key("n", "<C-h>", [[:ToggleTerm size=10 direction=horizontal name=horiz<CR>]], opts)
-key("n", "<C-v>", [[:ToggleTerm size=45 direction=vertical name=vertic<CR>]], opts)
--- DEBUGGING KEYBINDINGS
-key("n", "<leader>dt", [[:lua require("dap").toggle_breakpoint()<CR>]], opts)
-key("n", "<leader>dc", [[:lua require("dap").continue()<CR>]], opts)
--- UTILITY KEYS
-key(duo, "<leader>o", ":Oil<CR>", opts) -- FILE EDITING
-key(duo, "<C-s>", ":Silicon<CR>", opts) -- SCREENSHOT
-key(duo, "<leader>b", ":Neotree filesystem toggle<CR>", opts) -- EXPLORER
-key("n", "<leader>md", ":MarkdownPreviewToggle<CR>", opts) -- MARKDOWN TOGGLE
-key("n", "<leader>hl", [[:nohl <CR>]], opts) -- GET RID OF HIGHTLIGHTS
-key("n", "<S-Up>", [[:lua require("togglr").toggle_word()<CR>]], opts) -- TOGGLE WORD
-key(duo, "<leader>tr", [[:Trim<CR>]], opts) -- TRIM TRAILING SPACE                                -- LazyGit  
-```
-
 - write your `options` in `~/.config/nvim/lua/config/options.lua`
-
-```lua
-local opt = vim.opt
-
-opt.expandtab = true
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
-opt.clipboard = "unnamedplus"
-opt.number = true
-opt.relativenumber = true
-vim.g.mapleader = " "
-vim.o.signcolumn = "yes"
-
--- FOLDING 
-vim.o.foldenable = true
-vim.o.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
-vim.o.foldcolumn = '1'
-vim.o.foldlevel = 99
-vim.o.foldlevelstart = 99
-```
 
 **Plugins to install**
 
@@ -262,18 +185,140 @@ MasonInstall *-language-server
 
 ### Keybindings
 
-| Modes                     | Operations in Insert Mode                                                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Movements & Motions       | `h` left, `j` down, `k` up, `l` right                                                                                                                               |
-| Copy / Paste              | `y` copy, `p` paste                                                                                                                                                 |
-| Delete / Cut              | `d` delete, `x` cut                                                                                                                                                 |
-| Utilities                 | Repeat `.` , Undo `u`, Redo `<C-r>`, Change `c`, `q` quit, `w` save, `!` force                                                                                      |
-| Auxiliary                 | `x` character, `xx` line, `0-9` number, `$` end, `.` beginning, `{}` paragraph up/down , `p:` paragraph, `i` inner, `a` a                                           |
-| Speciality                | `0` start of line, `_` before line starts, `e` end of word, `zz` centre view, `gg` top, `G` bottom, `%` go to opening/closing paragraph, `:!` run terminal commands |
-| Replace                   | `:%s/old/new/g`, `:s/old/new/`, `r`                                                                                                                                 |
-| Search / Find             | `:%s/pattern//g`, `, /`                                                                                                                                             |
-| Normal Ops in Insert Mode | `Ctrl + W` delete word, `Ctrl + u` delete to beginning of line, `Ctrl + o` do normal mode in insert mode                                                            |
+| Vim            | Keybinding       | Task                                     |
+|----------------|------------------|------------------------------------------|
+| **Global**     |                  |                                          |
+|                | `h`              | Keyword - open help for keyword          |
+|                | `ter`            | Open a terminal window                   |
+|                | `w`              | Save                                     |
+|                | `q`              | Quit                                     |
+|                | `!`              | Force                                    |
+|                | `wqa`            | Save all and quit                        |
+|                | `ZZ`             | Save and quit                            |
+|                | `bd`             | Close current buffer                     |
+|                | `ls buffers`     | List all open buffers                    |
+| **Modes**      |                  |                                          |
+|                | `i`              | Insert in place                          |
+|                | `I`              | Insert in the beginning of line          |
+|                | `a`              | Insert after character                   |
+|                | `A`              | Insert at the end of line                |
+|                | `o`              | Insert on new line                       |
+|                | `O`              | Insert on new line above                 |
+|                | `ea`             | Insert at end of word                    |
+|                | `v`              | Visual mode                              |
+|                | `:`              | Command mode                             |
+|                | `ESC`            | Normal mode                              |
+| **Movement**   |                  |                                          |
+|                | `h j k l`        | Left, Down, Up, Right                    |
+|                | `gg \| H`        | Top screen                               |
+|                | `G \| L`         | Bottom screen                            |
+|                | `M`              | Middle screen                            |
+|                | `Ctrl + d`       | Down half screen                         |
+|                | `Ctrl + u`       | Up half screen                           |
+|                | `Ctrl + b`       | Up one page                              |
+|                | `Ctrl + f`       | Down one page                            |
+|                | `5gg`            | Line 5                                   |
+|                | `21gg`           | Line 21                                  |
+|                | `zz`             | Center cursor                            |
+|                | `zt`             | Cursor on top                            |
+|                | `zb`             | Cursor on bottom                         |
+|                | `0`              | Start of line                            |
+|                | `_`              | Before line starts                       |
+|                | `$`              | End of line                              |
+|                | `e`              | End of word                              |
+|                | `%`              | Go to opening/closing paragraph          |
+| **Editing**    |                  |                                          |
+|                | `y`              | Copy                                     |
+|                | `p`              | Paste                                    |
+|                | `12yy`           | Copy 12 lines                            |
+|                | `]p`             | Paste and adjust indent                  |
+|                | `d`              | Delete                                   |
+|                | `x`              | Cut                                      |
+|                | `c`              | Change                                   |
+|                | `.` \| `;`       | Repeat                                   |
+|                | `u`              | Undo                                     |
+|                | `<C-r>`          | Redo                                     |
+| **Visual Mode**|                  |                                          |
+|                | `x`              | Character                                |
+|                | `xx`             | Line                                     |
+|                | `0-9`            | Number                                   |
+|                | `.`              | Beginning                                |
+|                | `{...}`          | Paragraph up/down                        |
+|                | `p`              | Paragraph                                |
+|                | `i`              | Inner                                    |
+|                | `a`              | Outer                                    |
+|                | `o`              | Go to the other end of highlight         |
+| **Speciality** |                  |                                          |
+|                | `J`              | Remove space between two lines           |
+|                | `gwip`           | Reflow paragraph                         |
+|                | `xp`             | Transpose two letters                    |
+|                | `~, u, U`        | Switch character, word, line case        |
+| **Search & Replace** |            |                                          |
+|                | `:%s/pattern//g` | Search in document                       |
+|                | `/`              | Forward search                           |
+|                | `?`              | Backward search                          |
+|                | `n`              | Repeat forward                           |
+|                | `N`              | Backward repeat                          |
+|                | `:%s/old/new/g`  | Replace in document                      |
+|                | `:s/old/new/`    | Replace in document                      |
+|                | `r`              | Replace character                        |
+|                | `R`              | Replace until ESC pressed                |
+|                | `:%s/old/new/gc` | Replace old with new with confirmations  |
+| **Normal Ops in Insert Mode**  |  |                                          |
+|                | `Ctrl + w`       | Delete word                              |
+|                | `Ctrl + u`       | Delete to beginning of line              |
+|                | `Ctrl + o`       | Do normal mode in insert mode for one operation |
+|                | `Ctrl + d/t`     | Indent                                   |
+| **Registers**  |                  |                                          |
+|                | `:reg`           | Show registers content                   |
+|                | `"xy`            | Yank into register x                     |
+|                | `"xp`            | Paste contents of register x             |
+| **Marks**      |                  |                                          |
+|                | `:marks`         | List of marks                            |
+|                | `ma`             | Set current position for mark A          |
+|                | `` `a``          | Jump to position of mark A               |
+|                | `:changes`       | List of change                           |
+| **Macros**     |                  |                                          |
+|                | `qa`             | Record macro a                           |
+|                | `q`              | Stop recording macro                     |
+|                | `@a`             | Run macro a                              |
+|                | `@@`             | Rerun last run macro                     |
+| **Custom**     |                  |                                          |
+|                | `Telescope`      | Browse files in project                  |
+| **LSP**        |                  |                                          |
+|                | `K`              | Manual                                   |
+|                | `gd`             | Go to Definition                         |
+|                | `gt`             | Go to type                               |
+|                | `<leader>ft`     | Format                                   |
+|                | `<leader>ca`     | Code action                              |
+|                | `<leader>rf`     | Code references                          |
+|                | `<leader>rn`     | Rename code throughout                   |
+|                | `<C-Enter>`      | Completions                              |
+|                | `<leader>ds`     | Document symbols                         |
+| **Line Movement**|                |                                          |
+|                | `<A-Down>`       | Move line, block down                    |
+|                | `<A-Up>`         | Move line, block up                      |
+|                | `<A-Left>`       | Move words left                          |
+|                | `<A-Right>`      | Move words right                         |
+| **Git**        |                  |                                          |
+|                | `<leader>gb`     | Git blame line toggle                    |
+|                | `<C-g>`          | Lazygit launcher                         |
+| **Terminal**   |                  |                                          |
+|                | `<C-\>`          | Git blame line toggle                    |
+|                | `<C-h>`          | Git blame line toggle                    |
+|                | `<C-v>`          | Git blame line toggle                    |
+| **Debugging**  |                  |                                          |
+|                | `<leader>dt`     | Toggle break-point (debugging)           |
+|                | `<leader>dc`     | Continue (debugging)                     |
+| **Utility Keys**  |               |                                          |
+|                | `<leader>o`      | Oil file editor                          |
+|                | `<C-s>`          | Take snapshot                            |
+|                | `<leader>b`      | File explorer                            |
+|                | `<leader>md`     | Toggle markdown preview                  |
+|                | `<leader>hl`     | Remove highlights                        |
+|                | `<S-Up>`         | Toggle word (true, false)                |
+|                | `<leader>tr`     | Trim blank lines, space                  |
+|                | `<leader>d`      | Close current buffer                     |
 
 ### Resources
-
-https://github.com/miraculusik/dotfiles/blob/main/.config/nvim/init.lua
+[Vim Cheatsheet](https://vim.rtorr.com/)
