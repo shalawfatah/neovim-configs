@@ -32,6 +32,7 @@ return {
         "go",
         "sql",
         "toml",
+        "kotlin",
       }
     })
   end,

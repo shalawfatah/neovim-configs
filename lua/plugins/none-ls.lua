@@ -9,6 +9,8 @@ return {
         null_ls.builtins.completion.luasnip,
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.ktlint,
+        null_ls.builtins.diagnostics.ktlint,
         null_ls.builtins.hover.dictionary,
       },
     })

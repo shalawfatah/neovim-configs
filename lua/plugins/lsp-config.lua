@@ -38,6 +38,9 @@ return {
       lspconfig.gopls.setup({
         capabilities = capabilities,
       })
+      lspconfig.kotlin_language_server.setup({
+        capabilities = capabilities,
+      })
     end,
   },
 }
