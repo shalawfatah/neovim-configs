@@ -187,17 +187,13 @@ MasonInstall *-language-server
 
 | Vim            | Keybinding       | Task                                     |
 |----------------|------------------|------------------------------------------|
-| **Global**     |                  |                                          |
-|                | `h`              | Keyword - open help for keyword          |
-|                | `ter`            | Open a terminal window                   |
+| **Global**                                                                   |
 |                | `w`              | Save                                     |
 |                | `q`              | Quit                                     |
 |                | `!`              | Force                                    |
-|                | `wqa`            | Save all and quit                        |
 |                | `ZZ`             | Save and quit                            |
-|                | `bd`             | Close current buffer                     |
 |                | `ls buffers`     | List all open buffers                    |
-| **Modes**      |                  |                                          |
+| **Modes**                                                                    |
 |                | `i`              | Insert in place                          |
 |                | `I`              | Insert in the beginning of line          |
 |                | `a`              | Insert after character                   |
@@ -208,7 +204,7 @@ MasonInstall *-language-server
 |                | `v`              | Visual mode                              |
 |                | `:`              | Command mode                             |
 |                | `ESC`            | Normal mode                              |
-| **Movement**   |                  |                                          |
+| **Movement**                                                                 |
 |                | `h j k l`        | Left, Down, Up, Right                    |
 |                | `gg \| H`        | Top screen                               |
 |                | `G \| L`         | Bottom screen                            |
@@ -217,17 +213,14 @@ MasonInstall *-language-server
 |                | `Ctrl + u`       | Up half screen                           |
 |                | `Ctrl + b`       | Up one page                              |
 |                | `Ctrl + f`       | Down one page                            |
-|                | `5gg`            | Line 5                                   |
 |                | `21gg`           | Line 21                                  |
 |                | `zz`             | Center cursor                            |
-|                | `zt`             | Cursor on top                            |
-|                | `zb`             | Cursor on bottom                         |
 |                | `0`              | Start of line                            |
 |                | `_`              | Before line starts                       |
 |                | `$`              | End of line                              |
 |                | `e`              | End of word                              |
 |                | `%`              | Go to opening/closing paragraph          |
-| **Editing**    |                  |                                          |
+| **Editing**                                                                  |
 |                | `y`              | Copy                                     |
 |                | `p`              | Paste                                    |
 |                | `12yy`           | Copy 12 lines                            |
@@ -238,7 +231,7 @@ MasonInstall *-language-server
 |                | `.` \| `;`       | Repeat                                   |
 |                | `u`              | Undo                                     |
 |                | `<C-r>`          | Redo                                     |
-| **Visual Mode**|                  |                                          |
+| **Visual Mode**                                                              |
 |                | `x`              | Character                                |
 |                | `xx`             | Line                                     |
 |                | `0-9`            | Number                                   |
@@ -248,12 +241,12 @@ MasonInstall *-language-server
 |                | `i`              | Inner                                    |
 |                | `a`              | Outer                                    |
 |                | `o`              | Go to the other end of highlight         |
-| **Speciality** |                  |                                          |
+| **Speciality**                                                               |
 |                | `J`              | Remove space between two lines           |
 |                | `gwip`           | Reflow paragraph                         |
 |                | `xp`             | Transpose two letters                    |
 |                | `~, u, U`        | Switch character, word, line case        |
-| **Search & Replace** |            |                                          |
+| **Search & Replace**                                                         |
 |                | `:%s/pattern//g` | Search in document                       |
 |                | `/`              | Forward search                           |
 |                | `?`              | Backward search                          |
@@ -264,28 +257,36 @@ MasonInstall *-language-server
 |                | `r`              | Replace character                        |
 |                | `R`              | Replace until ESC pressed                |
 |                | `:%s/old/new/gc` | Replace old with new with confirmations  |
-| **Normal Ops in Insert Mode**  |  |                                          |
+| **Normal Ops in Insert Mode**                                                |
 |                | `Ctrl + w`       | Delete word                              |
 |                | `Ctrl + u`       | Delete to beginning of line              |
 |                | `Ctrl + o`       | Normal mode in insert mode - 1 operation |
 |                | `Ctrl + d/t`     | Indent                                   |
-| **Registers**  |                  |                                          |
+| **Registers**                                                                |
 |                | `:reg`           | Show registers content                   |
 |                | `"xy`            | Yank into register x                     |
 |                | `"xp`            | Paste contents of register x             |
-| **Marks**      |                  |                                          |
+| **Marks**                                                                    |
 |                | `:marks`         | List of marks                            |
 |                | `ma`             | Set current position for mark A          |
 |                | `` `a``          | Jump to position of mark A               |
 |                | `:changes`       | List of change                           |
-| **Macros**     |                  |                                          |
+| **Macros**                                                                   |
 |                | `qa`             | Record macro a                           |
 |                | `q`              | Stop recording macro                     |
 |                | `@a`             | Run macro a                              |
 |                | `@@`             | Rerun last run macro                     |
-| **Custom**     |                  |                                          |
-|                | `Telescope`      | Browse files in project                  |
-| **LSP**        |                  |                                          |
+| **Custom Keys**                                                              |
+| **Telescope**                                                                |
+|                | `<C-p>`          | Show files in a project                  |
+|                | `<leader>lg`     | Search in entire project                 |
+|                | `<leader>bf`     | Show open buffers                        |
+|                | `<leader>h`      | Show help                                |
+|                | `<leader>u`      | Show undo list                           |
+|                | `<leader>w`      | Show projects                            |
+|                | `<leader>y`      | Show copy/yank list                      |
+|                | `<leader>rr`     | Refactoing                               |
+| **LSP**                                                                      |
 |                | `K`              | Manual                                   |
 |                | `gd`             | Go to Definition                         |
 |                | `gt`             | Go to type                               |
@@ -293,24 +294,22 @@ MasonInstall *-language-server
 |                | `<leader>ca`     | Code action                              |
 |                | `<leader>rf`     | Code references                          |
 |                | `<leader>rn`     | Rename code throughout                   |
-|                | `<C-Enter>`      | Completions                              |
 |                | `<leader>ds`     | Document symbols                         |
-| **Line Movement**|                |                                          |
+| **Line Movement**                                                            |
 |                | `<A-Down>`       | Move line, block down                    |
 |                | `<A-Up>`         | Move line, block up                      |
 |                | `<A-Left>`       | Move words left                          |
-|                | `<A-Right>`      | Move words right                         |
-| **Git**        |                  |                                          |
+| **Git**                                                                      |
 |                | `<leader>gb`     | Git blame line toggle                    |
 |                | `<C-g>`          | Lazygit launcher                         |
-| **Terminal**   |                  |                                          |
-|                | `<C-\>`          | Git blame line toggle                    |
-|                | `<C-h>`          | Git blame line toggle                    |
-|                | `<C-v>`          | Git blame line toggle                    |
-| **Debugging**  |                  |                                          |
+| **Terminal**                                                                 |
+|                | `<C-\>`          | Terminal in default (float)              |
+|                | `<C-h>`          | Terminal in horizontal mode              |
+|                | `<C-v>`          | Terminal in vertical mode                |
+| **Debugging**                                                                |
 |                | `<leader>dt`     | Toggle break-point (debugging)           |
 |                | `<leader>dc`     | Continue (debugging)                     |
-| **Utility Keys**  |               |                                          |
+| **Utility Keys**                                                             |
 |                | `<leader>o`      | Oil file editor                          |
 |                | `<C-s>`          | Take snapshot                            |
 |                | `<leader>b`      | File explorer                            |
