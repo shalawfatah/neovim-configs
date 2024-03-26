@@ -200,7 +200,6 @@ MasonInstall *-language-server
 |                | `A`              | Insert at the end of line                |
 |                | `o`              | Insert on new line                       |
 |                | `O`              | Insert on new line above                 |
-|                | `ea`             | Insert at end of word                    |
 |                | `v`              | Visual mode                              |
 |                | `:`              | Command mode                             |
 |                | `ESC`            | Normal mode                              |
@@ -211,8 +210,6 @@ MasonInstall *-language-server
 |                | `M`              | Middle screen                            |
 |                | `Ctrl + d`       | Down half screen                         |
 |                | `Ctrl + u`       | Up half screen                           |
-|                | `Ctrl + b`       | Up one page                              |
-|                | `Ctrl + f`       | Down one page                            |
 |                | `21gg`           | Line 21                                  |
 |                | `zz`             | Center cursor                            |
 |                | `0`              | Start of line                            |
