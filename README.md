@@ -9,6 +9,7 @@ The final config has these features provided by the mentioned plugins:
 - [x] Yank history using telescope and yank plugin, using sqlite to persist yanks throughout different sessions
 - [x] Integrated terminal using toggleterm plugin, with float, vertical and horizontal choices
 - [x] Easy motion using Leap.nvim plugin
+- [x] Manage sessions using Tmux
 - [x] Screenshot of full page and partial code using silicon 
 - [x] A custom look for the dashboard 
 - [x] A big file management plugin to work with large files 
@@ -60,6 +61,7 @@ The final config has these features provided by the mentioned plugins:
 - Install `lazygit` if you want to use the lazygit plugin. 
 - Install `make` for `fzf` on `telescope` on linux.
 - Install `delve` if you want to debug Go applications using neovim 
+- Install Tmux `brew install tmux` 
 
 ### Kitty Terminal
 
@@ -169,6 +171,7 @@ toggleterm.nvim                 # toggle terminal, floating, horizontal, or vert
 togglr.nvim                     # toggle words to opposite, true to false < to >
 trim.nvim                       # trim trailing white space, last and first empty lines 
 url-open                        # open URLs in any file  
+vim-tmux-navigator              # Configure keybindings between Vim and Tmux
 vim-visual-multi                # multi-cursor operations made easy 
 ```
 
