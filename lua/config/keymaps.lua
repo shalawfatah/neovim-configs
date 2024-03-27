@@ -33,8 +33,8 @@ key("n", "<A-Right>", ":MoveWord 1<CR>", opts) -- MOVE WORD RIGHT
 key("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", opts) -- SHOW GIT LINE COMMIT OWNER
 key(duo, "<C-g>", [[:LazyGit<CR>]], opts) -- LazyGit
 -- TOGGLE TERMINAL KEYBINDINGS
-key("n", "<C-h>", [[:ToggleTerm size=10 direction=horizontal name=horiz<CR>]], opts)
-key("n", "<C-v>", [[:ToggleTerm size=45 direction=vertical name=vertic<CR>]], opts)
+key(duo, "<C-h>", [[:ToggleTerm size=10 direction=horizontal name=horiz<CR>]], opts)
+key(duo, "<C-v>", [[:ToggleTerm size=45 direction=vertical name=vertic<CR>]], opts)
 -- DEBUGGING KEYBINDINGS
 key("n", "<leader>dt", [[:lua require("dap").toggle_breakpoint()<CR>]], opts)
 key("n", "<leader>dc", [[:lua require("dap").continue()<CR>]], opts)
