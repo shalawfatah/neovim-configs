@@ -1,3 +1,5 @@
+-- CONFIGURE KEYBINDINGS BETWEEN VIM AND TMUX
+
 return {
   "christoomey/vim-tmux-navigator",
   cmd = {
