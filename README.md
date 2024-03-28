@@ -46,8 +46,7 @@ The final config has these features provided by the mentioned plugins:
 - [x] The ability to rename code throughout the project, find where they are dfined, and all their references throughout the project, along with symbol tree and other features like types and structure.
 - [x] The ability to refactor code using refactoring plugin. 
 - [x] Marking and demakring files have better UI experience with mark column icons. 
-- [x] The functionality and keymap of every plugin is written on top of the plugin 
-
+- [x] Hiding/Unhiding nested fold numbers through the use of a plugin 
 
 ### How To
 
@@ -159,6 +158,7 @@ project.nvim                    # project and workspace management
 promise-async                   # folding and unfolding (ufo) plugin dependency  
 refactoring.nvim                # refactoring engine for nvim 
 sqlite.lua                      # sqlite database for neovim 
+statuscol.lua                   # Hide status column folding numbers 
 telescope-file-browser.nvim     # file browser integration for telescope 
 telescope-fzf-native.nvim       # fuzzy search integration with telescope 
 telescope-lsp-handlers.nvim     # lsp handler for telescope 
