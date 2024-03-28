@@ -104,18 +104,6 @@ The final config has these features provided by the mentioned plugins:
 - You might need to hit `Mason` and install necessary formatters, linters and LSPs. 
 - Quit `nvim` and restart again for plugins to take effect. 
 
-
-### Commands to Run
-
-```bash
-source %
-Lazy
-TSUpdate
-Mason
-MasonUpdate
-MasonInstall *-language-server
-```
-
 ### Keybindings
 - Some normal vim keybindings are used along with some custom and plugin provided ones 
 - For the list of all keybindings, check this [keybinding list](https://gist.github.com/shalawfatah/295e1ee56fd321843f7c6c21a1a5c134)
