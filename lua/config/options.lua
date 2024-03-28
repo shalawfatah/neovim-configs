@@ -13,10 +13,6 @@ opt.number = true
 opt.relativenumber = true
 vim.g.mapleader = " "
 vim.o.signcolumn = "yes"
-
--- FOLDING 
-opt.foldenable = true
-opt.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
 opt.foldcolumn = '1'
-opt.foldlevel = 99
-opt.foldlevelstart = 99
+opt.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
+opt.foldlevelstart = 20
