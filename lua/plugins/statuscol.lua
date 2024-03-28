@@ -1,3 +1,5 @@
+-- HIDE STATUS COL NUMBERS 
+
 return {
     'luukvbaal/statuscol.nvim',
     opts = function()
