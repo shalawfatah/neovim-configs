@@ -2,12 +2,14 @@
 This is an attempt to build a full IDE through neovim and its environment using lazy.nvim package. This IDE will not only replace your current IDE features, but adds to them. 
 Some images from the the final configuration:
 
-<img src="https://i.imgur.com/FlpUkQy.png" width="300" title="Neovim dashboard using alpha.nvim">
-<img src="https://i.imgur.com/mu7XO4y.png" width="300" title="Using Starship for better prompts">
-<img src="https://i.imgur.com/84feGRk.png" width="300" title="Telescope finds references">
-<img src="https://i.imgur.com/6yJ6Cp8.png" width="300" title="Telescope used for search ">
-<img src="https://i.imgur.com/QtPj2Wz.png" width="300" title="Telescope is used as a file explorer">
-<img src="https://i.imgur.com/btBOlX2.png" width="300" title="Main editor, neovim">
+<section style="display:flex; flex-direction:row; gap: 10px; flex-wrap:wrap; ">
+    <img src="https://i.imgur.com/FlpUkQy.png" width="350" title="Neovim dashboard using alpha.nvim">
+    <img src="https://i.imgur.com/mu7XO4y.png" width="350" title="Using Starship for better prompts">
+    <img src="https://i.imgur.com/84feGRk.png" width="350" title="Telescope finds references">
+    <img src="https://i.imgur.com/6yJ6Cp8.png" width="350" title="Telescope used for search ">
+    <img src="https://i.imgur.com/QtPj2Wz.png" width="350" title="Telescope is used as a file explorer">
+    <img src="https://i.imgur.com/btBOlX2.png" width="350" title="Main editor, neovim">
+</section>
 
 ### Features
 The final config has these features provided by the mentioned plugins: 
