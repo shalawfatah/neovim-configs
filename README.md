@@ -62,33 +62,88 @@ The final config has these features provided by the mentioned plugins:
 - Install `delve` if you want to debug Go applications using neovim 
 - Install Tmux `brew install tmux` 
 
-### Kitty Terminal
+### iTerm2 Terminal 
 
-- Install [Kitty](https://sw.kovidgoyal.net/kitty/) Terminal
-- Configure it as below in `~/.config/kitty/kitty.conf`
+- Install [iTerm2](https://iterm2.com/) Terminal
 
+### Tmux 
+- Install [Tmux](https://github.com/tmux/tmux/wiki/Installing) 
+- Create ~/.tmux.conf and configure it like this 
 ```bash
-# FONT
-font_family FiraCode Nerd Font Mono
-font_size 20
-modify_font baseline 110%
+set -g default-terminal "screen-256color"
 
-# BORDER
-window_border_width 1
-window_padding_width 16
-active_border_color #15191f
+set-option -g status-position top
 
-# COLORS
-background #313446
-macos_titlebar_color #313446
-inactive_text_alpha 0.1
-inactive_border_color #367588
+set -g prefix C-a
+unbind C-b
+bind-key C-a send-prefix
 
-# BACKGROUND
-window_logo_path /Users/user/.config/kitty/origami.png
-window_logo_position center
-window_logo_alpha 0.1
+unbind %
+bind | split-window -h
+
+unbind '"'
+bind - split-window -v
+
+unbind r
+bind r source-file ~/.tmux.conf
+
+bind -r j resize-pane -D 5
+bind -r k resize-pane -U 5
+bind -r l resize-pane -R 5
+bind -r h resize-pane -L 5
+
+bind -r m resize-pane -Z
+
+set -g mouse on
+
+set-window-option -g mode-keys vi
+
+bind-key -T copy-mode-vi 'v' send -X begin-selection # start selecting text with "v"
+bind-key -T copy-mode-vi 'y' send -X copy-selection # copy text with "y"
+
+unbind -T copy-mode-vi MouseDragEnd1Pane # don't exit copy mode when dragging with mouse
+
+# remove delay for exiting insert mode with ESC in Neovim
+set -sg escape-time 10
+
+# tpm plugin
+set -g @plugin 'tmux-plugins/tpm'
+
+# list of tmux plugins
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-resurrect' # persist tmux sessions after computer restart
+set -g @plugin 'tmux-plugins/tmux-continuum' # automatically saves sessions for you every 15 minutes
+set -g @plugin 'thesast/tmux-transient-status'
+set -g @plugin 'catppuccin/tmux'
+
+set -g @catppuccin_window_left_separator " "
+set -g @catppuccin_window_right_separator " "
+set -g @catppuccin_window_number_position "right"
+set -g @catppuccin_window_middle_separator " "
+
+set -g @catppuccin_window_default_fill " "
+
+set -g @catppuccin_window_current_fill " "
+set -g @catppuccin_window_current_text " "
+
+set -g @catppuccin_status_modules_right "session"
+set -g @catppuccin_status_modules_left "..."
+set -g @catppuccin_status_left_separator  ""
+set -g @catppuccin_status_right_separator " "
+set -g @catppuccin_status_right_separator_inverse "yes"
+set -g @catppuccin_status_fill "all"
+set -g @catppuccin_status_connect_separator "no"
+set -g @catppuccin_status_background "default"
+
+set -g @resurrect-capture-pane-contents 'on'
+set -g @continuum-restore 'on'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm
 ```
+3. Run `~/.tmux/plugins/tpm/bin/install_plugins`
+4. Run `tmux source-file ~/.tmux.conf`
+5. Test it with `tmux`
 
 ### Neovim
 

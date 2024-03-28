@@ -2,5 +2,7 @@
 
 return {
   "nvim-lualine/lualine.nvim",
-  config = true,
+  config = function()
+    require("lualine").setup({})
+  end,
 }
