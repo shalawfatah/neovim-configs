@@ -61,23 +61,22 @@ The final config has these features provided by the mentioned plugins:
 - Install `delve` if you want to debug Go applications using neovim 
 - Install Tmux `brew install tmux` 
 
-### iTerm2 Terminal 
+### Alacritty Setup  
 
-- Install [iTerm2](https://iterm2.com/) Terminal
-- Down this iTerm2 [profile](/) # will be released soon
-- Go to your iTerm2 `Setting > Profiles > General tab` on the bottom left of the screen click `... Other Actions` and then choose `Import JSON Profiles` then choose the above json profile. 
+- Install [Alacritty](https://github.com/alacritty/alacritty?tab=readme-ov-file) terminal emulator
+- Create ~/.alacritty.toml 
+- Paste this [alacrity configuration](https://gist.github.com/shalawfatah/635397d3d04d2e834e9e5f440f61cc14) 
 
 ### Starship Prompt 
 - Use [starship](https://starship.rs) to change the terminal prompt message
-- Download this [starship profile](/) # will be released soon
-- Go to where you downloaded the profile and do `mv starship.tom ~/.config/starship.toml`
-- Alternatively, you can create `~/.config/starship.toml` by yourself and configure it. 
+- Create `~/.config/starship.toml`
+- Copy and paste this [starship profile](https://gist.github.com/shalawfatah/c9c6fdcfb89d904981b795698cc625c1)
+- Run `source ~/.config/starship.toml` 
 
 ### Tmux 
 - Install [Tmux](https://github.com/tmux/tmux/wiki/Installing) 
-- Download this [tmux profile](/) # will be released soon. 
-- Go to where you downloaded the profile and `mv tmux.conf ~/.tmux.conf`
-- Alternatively you can create ~/.tmux.conf and configure it. 
+- Create ~/.tmux.conf and configure it. 
+- Copy and paste this [tmux profile](https://gist.github.com/shalawfatah/4e99cbbc9cdb519eb2b7e7ec7ffdf369)
 - Run `~/.tmux/plugins/tpm/bin/install_plugins`
 - Run `tmux source-file ~/.tmux.conf`
 - Test it with `tmux`
@@ -90,82 +89,11 @@ The final config has these features provided by the mentioned plugins:
 - write your `options` in `~/.config/nvim/lua/config/options.lua`
 
 **Plugins to install**
+- Check the `lua/plugins` directory in this repository and install all the plugins 
+- Use `Lazy` command and press `Shift + S` to sync your plugin manager.
+- You might need to hit `Mason` and install necessary formatters, linters and LSPs. 
+- Quit `nvim` and restart again for plugins to take effect. 
 
-```bash
-Comment.nvim                    # comment lines, blocks
-LuaSnip                         # snippet engine
-action-hints.nvim               # definition, reference hints
-alpha-nvim                      # custom dashboard
-auto-save.nvim                  # auto-save functionality
-bigfile.nvim                    # opening big files better
-catppuccin                      # catppuccin theme
-ccc.nvim                        # create colors rgb, hsl, hex
-nvim-cmp                        # completion enigne
-cmp-buffer                      # helper for completion engine  
-cmp-nvim-lsp                    # connecter of lsp and completion engine
-cmp_luasnip                     # another helper for lsp and completion engine 
-colortils.nvim                  # color utility
-core.nvim                       # core nvim plugin 
-dooku.nvim                      # generate documentation 
-dressing.nvim                   # improve default vim.ui
-friendly-snippets               # a collection of snippets 
-gitsigns.nvim                   # git signs, add, subtract, change, etc 
-highlight-undo.nvim             # visualize undo action 
-lazy.nvim                       # lazy package manager 
-lazygit.nvim                    # lazy git connector 
-leap.nvim                       # easy motions for vim 
-live-server.nvim                # live server 
-livecode.nvim                   # share code 
-lualine.nvim                    # better status line 
-markdown-preview.nvim           # markdown preview 
-marks.nvim                      # giving better marks experience with UI and keybindings
-mason-lspconfig.nvim            # connector for mason package manager and lsp 
-mason.nvim                      # mason package manager 
-modes.nvim                      # different colors for different modes 
-move.nvim                       # move lines and blocks of code left, right, up, and down
-neo-tree.nvim                   # file explorer for neovim 
-neoscroll.nvim                  # smooth scrolling for neovim 
-noice.nvim                      # floating command line for neovim 
-none-ls.nvim                    # lsp helper 
-nui.nvim                        # better ui components for neovim 
-nvim-autopairs                  # auto-pair functionality 
-nvim-cmp                        # completion engine 
-nvim-colorizer.lua              # colorize code 
-nvim-dap                        # debug adapator protocol
-nvim-dap-go                     # debug adaptor for golang 
-nvim-dap-ui                     # neovim debug adaptor ui 
-nvim-lspconfig                  # language server protocol engine 
-nvim-macros                     # store, re-use macros 
-nvim-neoclip.lua                # store yanks and re-use them 
-nvim-nio                        # dependency for debugger  
-nvim-notify                     # better notification system
-nvim-silicon                    # screenshots of your code 
-nvim-treesitter                 # helper for lsp, completion and linting
-nvim-ts-autotag                 # auto tag for html 
-nvim-ufo                        # folding and unfolding your code 
-nvim-web-devicons               # web devicons for your neovim 
-oil.nvim                        # edit files like text in neovim 
-plenary.nvim                    # dependency for many plugins 
-project.nvim                    # project and workspace management 
-promise-async                   # folding and unfolding (ufo) plugin dependency  
-refactoring.nvim                # refactoring engine for nvim 
-sqlite.lua                      # sqlite database for neovim 
-statuscol.lua                   # Hide status column folding numbers 
-telescope-file-browser.nvim     # file browser integration for telescope 
-telescope-fzf-native.nvim       # fuzzy search integration with telescope 
-telescope-lsp-handlers.nvim     # lsp handler for telescope 
-telescope-symbols.nvim          # symbol finder in telescope 
-telescope-ui-select.nvim        # select, input ui for telescope 
-telescope-undo.nvim             # undo tree for telescope 
-telescope.nvim                  # telescope, a window manager for neovim 
-text-case.nvim                  # change text for various cases, upper, lower, camel, etc
-toggleterm.nvim                 # toggle terminal, floating, horizontal, or vertical 
-togglr.nvim                     # toggle words to opposite, true to false < to >
-trim.nvim                       # trim trailing white space, last and first empty lines 
-url-open                        # open URLs in any file  
-vim-tmux-navigator              # Configure keybindings between Vim and Tmux
-vim-visual-multi                # multi-cursor operations made easy 
-```
 
 ### Commands to Run
 
@@ -179,137 +107,8 @@ MasonInstall *-language-server
 ```
 
 ### Keybindings
-
-| Vim            | Keybinding       | Task                                     |
-|----------------|------------------|------------------------------------------|
-| **Global**                                                                   |
-|                | `w`              | Save                                     |
-|                | `q`              | Quit                                     |
-|                | `!`              | Force                                    |
-|                | `ZZ`             | Save and quit                            |
-|                | `ls buffers`     | List all open buffers                    |
-| **Modes**                                                                    |
-|                | `i`              | Insert in place                          |
-|                | `I`              | Insert in the beginning of line          |
-|                | `a`              | Insert after character                   |
-|                | `A`              | Insert at the end of line                |
-|                | `o`              | Insert on new line                       |
-|                | `O`              | Insert on new line above                 |
-|                | `v`              | Visual mode                              |
-|                | `:`              | Command mode                             |
-|                | `ESC`            | Normal mode                              |
-| **Movement**                                                                 |
-|                | `h j k l`        | Left, Down, Up, Right                    |
-|                | `gg \| H`        | Top screen                               |
-|                | `G \| L`         | Bottom screen                            |
-|                | `M`              | Middle screen                            |
-|                | `Ctrl + d`       | Down half screen                         |
-|                | `Ctrl + u`       | Up half screen                           |
-|                | `21gg`           | Line 21                                  |
-|                | `zz`             | Center cursor                            |
-|                | `0`              | Start of line                            |
-|                | `_`              | Before line starts                       |
-|                | `$`              | End of line                              |
-|                | `e`              | End of word                              |
-|                | `%`              | Go to opening/closing paragraph          |
-| **Editing**                                                                  |
-|                | `y`              | Copy                                     |
-|                | `p`              | Paste                                    |
-|                | `12yy`           | Copy 12 lines                            |
-|                | `]p`             | Paste and adjust indent                  |
-|                | `d`              | Delete                                   |
-|                | `x`              | Cut                                      |
-|                | `c`              | Change                                   |
-|                | `.` \| `;`       | Repeat                                   |
-|                | `u`              | Undo                                     |
-|                | `<C-r>`          | Redo                                     |
-| **Visual Mode**                                                              |
-|                | `x`              | Character                                |
-|                | `xx`             | Line                                     |
-|                | `0-9`            | Number                                   |
-|                | `.`              | Beginning                                |
-|                | `{...}`          | Paragraph up/down                        |
-|                | `p`              | Paragraph                                |
-|                | `i`              | Inner                                    |
-|                | `a`              | Outer                                    |
-|                | `o`              | Go to the other end of highlight         |
-| **Speciality**                                                               |
-|                | `J`              | Remove space between two lines           |
-|                | `gwip`           | Reflow paragraph                         |
-|                | `xp`             | Transpose two letters                    |
-|                | `~, u, U`        | Switch character, word, line case        |
-| **Search & Replace**                                                         |
-|                | `:%s/pattern//g` | Search in document                       |
-|                | `/`              | Forward search                           |
-|                | `?`              | Backward search                          |
-|                | `n`              | Repeat forward                           |
-|                | `N`              | Backward repeat                          |
-|                | `:%s/old/new/g`  | Replace in document                      |
-|                | `:s/old/new/`    | Replace in document                      |
-|                | `r`              | Replace character                        |
-|                | `R`              | Replace until ESC pressed                |
-|                | `:%s/old/new/gc` | Replace old with new with confirmations  |
-| **Normal Ops in Insert Mode**                                                |
-|                | `Ctrl + w`       | Delete word                              |
-|                | `Ctrl + u`       | Delete to beginning of line              |
-|                | `Ctrl + o`       | Normal mode in insert mode - 1 operation |
-|                | `Ctrl + d/t`     | Indent                                   |
-| **Registers**                                                                |
-|                | `:reg`           | Show registers content                   |
-|                | `"xy`            | Yank into register x                     |
-|                | `"xp`            | Paste contents of register x             |
-| **Marks**                                                                    |
-|                | `:marks`         | List of marks                            |
-|                | `ma`             | Set current position for mark A          |
-|                | `` `a``          | Jump to position of mark A               |
-|                | `:changes`       | List of change                           |
-| **Macros**                                                                   |
-|                | `qa`             | Record macro a                           |
-|                | `q`              | Stop recording macro                     |
-|                | `@a`             | Run macro a                              |
-|                | `@@`             | Rerun last run macro                     |
-| **Custom Keys**                                                              |
-| **Telescope**                                                                |
-|                | `<C-p>`          | Show files in a project                  |
-|                | `<leader>lg`     | Search in entire project                 |
-|                | `<leader>bf`     | Show open buffers                        |
-|                | `<leader>h`      | Show help                                |
-|                | `<leader>u`      | Show undo list                           |
-|                | `<leader>w`      | Show projects                            |
-|                | `<leader>y`      | Show copy/yank list                      |
-|                | `<leader>rr`     | Refactoing                               |
-| **LSP**                                                                      |
-|                | `K`              | Manual                                   |
-|                | `gd`             | Go to Definition                         |
-|                | `gt`             | Go to type                               |
-|                | `<leader>ft`     | Format                                   |
-|                | `<leader>ca`     | Code action                              |
-|                | `<leader>rf`     | Code references                          |
-|                | `<leader>rn`     | Rename code throughout                   |
-|                | `<leader>ds`     | Document symbols                         |
-| **Line Movement**                                                            |
-|                | `<A-Down>`       | Move line, block down                    |
-|                | `<A-Up>`         | Move line, block up                      |
-|                | `<A-Left>`       | Move words left                          |
-| **Git**                                                                      |
-|                | `<leader>gb`     | Git blame line toggle                    |
-|                | `<C-g>`          | Lazygit launcher                         |
-| **Terminal**                                                                 |
-|                | `<C-\>`          | Terminal in default (float)              |
-|                | `<C-h>`          | Terminal in horizontal mode              |
-|                | `<C-v>`          | Terminal in vertical mode                |
-| **Debugging**                                                                |
-|                | `<leader>dt`     | Toggle break-point (debugging)           |
-|                | `<leader>dc`     | Continue (debugging)                     |
-| **Utility Keys**                                                             |
-|                | `<leader>o`      | Oil file editor                          |
-|                | `<C-s>`          | Take snapshot                            |
-|                | `<leader>b`      | File explorer                            |
-|                | `<leader>md`     | Toggle markdown preview                  |
-|                | `<leader>hl`     | Remove highlights                        |
-|                | `<S-Up>`         | Toggle word (true, false)                |
-|                | `<leader>tr`     | Trim blank lines, space                  |
-|                | `<leader>d`      | Close current buffer                     |
+- Some normal vim keybindings are used along with some custom and plugin provided ones 
+- For the list of all keybindings, check this [keybinding list](https://gist.github.com/shalawfatah/295e1ee56fd321843f7c6c21a1a5c134)
 
 ### Resources
 [Vim Cheatsheet](https://vim.rtorr.com/)
