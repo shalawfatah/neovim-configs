@@ -138,7 +138,6 @@ set -g @catppuccin_status_background "default"
 set -g @resurrect-capture-pane-contents 'on'
 set -g @continuum-restore 'on'
 
-# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm
 ```
 3. Run `~/.tmux/plugins/tpm/bin/install_plugins`
