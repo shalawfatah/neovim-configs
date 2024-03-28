@@ -64,154 +64,23 @@ The final config has these features provided by the mentioned plugins:
 ### iTerm2 Terminal 
 
 - Install [iTerm2](https://iterm2.com/) Terminal
+- Down this iTerm2 [profile](/) # will be released soon
+- Go to your iTerm2 `Setting > Profiles > General tab` on the bottom left of the screen click `... Other Actions` and then choose `Import JSON Profiles` then choose the above json profile. 
 
 ### Starship Prompt 
 - Use [starship](https://starship.rs) to change the terminal prompt message
-- Create `~/.config/starship.toml`
-- Configure the `~/.config/starship.toml` like this: 
-```
-format = """
-[  ](bg:#a3aed2 fg:#090c0c)\
-[](bg:#769ff0 fg:#a3aed2)\
-$directory\
-[](fg:#769ff0 bg:#394260)\
-$git_branch\
-$git_status\
-[](fg:#394260 bg:#212736)\
-$nodejs\
-$rust\
-$golang\
-$php\
-[](fg:#212736 bg:#1d2230)\
-$time\
-[ ](fg:#1d2230)\
-\n$character"""
-
-[directory]
-style = "fg:#e3e5e5 bg:#769ff0"
-format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
-
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "� "
-"Pictures" = " "
-
-[git_branch]
-symbol = ""
-style = "bg:#394260"
-format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
-
-[git_status]
-style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[rust]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[golang]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[php]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
-```
+- Download this [starship profile](/) # will be released soon
+- Go to where you downloaded the profile and do `mv starship.tom ~/.config/starship.toml`
+- Alternatively, you can create `~/.config/starship.toml` by yourself and configure it. 
 
 ### Tmux 
 - Install [Tmux](https://github.com/tmux/tmux/wiki/Installing) 
-- Create ~/.tmux.conf and configure it like this 
-```bash
-set -g default-terminal "screen-256color"
-
-set-option -g status-position top
-
-set -g prefix C-a
-unbind C-b
-bind-key C-a send-prefix
-
-unbind %
-bind | split-window -h
-
-unbind '"'
-bind - split-window -v
-
-unbind r
-bind r source-file ~/.tmux.conf
-
-bind -r j resize-pane -D 5
-bind -r k resize-pane -U 5
-bind -r l resize-pane -R 5
-bind -r h resize-pane -L 5
-
-bind -r m resize-pane -Z
-
-set -g mouse on
-
-set-window-option -g mode-keys vi
-
-bind-key -T copy-mode-vi 'v' send -X begin-selection # start selecting text with "v"
-bind-key -T copy-mode-vi 'y' send -X copy-selection # copy text with "y"
-
-unbind -T copy-mode-vi MouseDragEnd1Pane # don't exit copy mode when dragging with mouse
-
-# remove delay for exiting insert mode with ESC in Neovim
-set -sg escape-time 10
-
-# tpm plugin
-set -g @plugin 'tmux-plugins/tpm'
-
-# list of tmux plugins
-set -g @plugin 'christoomey/vim-tmux-navigator'
-set -g @plugin 'tmux-plugins/tmux-resurrect' # persist tmux sessions after computer restart
-set -g @plugin 'tmux-plugins/tmux-continuum' # automatically saves sessions for you every 15 minutes
-set -g @plugin 'thesast/tmux-transient-status'
-set -g @plugin 'catppuccin/tmux'
-
-set -g @catppuccin_window_left_separator " "
-set -g @catppuccin_window_right_separator " "
-set -g @catppuccin_window_number_position "right"
-set -g @catppuccin_window_middle_separator " "
-
-set -g @catppuccin_window_default_fill " "
-
-set -g @catppuccin_window_current_fill " "
-set -g @catppuccin_window_current_text " "
-
-set -g @catppuccin_status_modules_right "session"
-set -g @catppuccin_status_modules_left "..."
-set -g @catppuccin_status_left_separator  ""
-set -g @catppuccin_status_right_separator " "
-set -g @catppuccin_status_right_separator_inverse "yes"
-set -g @catppuccin_status_fill "all"
-set -g @catppuccin_status_connect_separator "no"
-set -g @catppuccin_status_background "default"
-
-set -g @resurrect-capture-pane-contents 'on'
-set -g @continuum-restore 'on'
-
-run '~/.tmux/plugins/tpm/tpm
-```
-3. Run `~/.tmux/plugins/tpm/bin/install_plugins`
-4. Run `tmux source-file ~/.tmux.conf`
-5. Test it with `tmux`
+- Download this [tmux profile](/) # will be released soon. 
+- Go to where you downloaded the profile and `mv tmux.conf ~/.tmux.conf`
+- Alternatively you can create ~/.tmux.conf and configure it. 
+- Run `~/.tmux/plugins/tpm/bin/install_plugins`
+- Run `tmux source-file ~/.tmux.conf`
+- Test it with `tmux`
 
 ### Neovim
 
