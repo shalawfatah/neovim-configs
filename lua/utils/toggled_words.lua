@@ -1,3 +1,5 @@
+-- TOGGLED WORDS TO BE USED IN elentok/togglr.nvim PLUGIN 
+
 return {
   ["<"] = ">",
   ["="] = "!=",
