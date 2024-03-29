@@ -41,9 +41,16 @@ return {
           base = "#2a2734",
           mantle = "#2a2734",
           crust = "#2a2734",
-        }
+        },
       },
-      custom_highlights = {},
+      custom_highlights = function(colors)
+        return {
+          -- Comment = { fg = colors.flamingo },
+          TabLineSel = { bg = colors.red },
+          CmpBorder = { fg = colors.surface2 },
+          Pmenu = { bg = colors.none },
+        }
+      end,
       integrations = {
         cmp = true,
         gitsigns = true,
