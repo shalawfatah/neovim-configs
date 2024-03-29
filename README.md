@@ -68,7 +68,6 @@ The final config has these features provided by the mentioned plugins:
 - Install `ripgrep` for live search on `telescope` to work.
 - Install `lazygit` if you want to use the lazygit plugin. 
 - Install `make` for `fzf` on `telescope` on linux.
-- Install `delve` if you want to debug Go applications using neovim 
 - Install Tmux `brew install tmux` 
 
 ### Alacritty Setup  
