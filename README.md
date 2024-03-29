@@ -23,7 +23,7 @@ The final config has these features provided by the mentioned plugins:
 - [x] Screenshot of full page and partial code using silicon 
 - [x] A custom look for the dashboard 
 - [x] A big file management plugin to work with large files 
-- [x] Color highlighting using three plugins 
+- [x] Color highlighting 
 - [x] A beautiful lua status line 
 - [x] Formatting different languages using lua formatter 
 - [x] A completion engine using nvim-cmp
