@@ -15,6 +15,7 @@ Some images from the the final configuration:
 The final config has these features provided by the mentioned plugins: 
 
 - [x] Fuzzy search for words, buffers, commands and projects/workspaces using `telescope`
+- [x] The IDE loads under 100ms which is fast by any comparison
 - [x] Undo history using telescope and undo extension 
 - [x] Yank history using telescope and yank plugin, using sqlite to persist yanks throughout different sessions
 - [x] Integrated terminal using toggleterm plugin, with float, vertical and horizontal choices

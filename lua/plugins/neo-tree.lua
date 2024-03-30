@@ -3,9 +3,7 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-  },
+  event = "VeryLazy",
   config = function()
     require("neo-tree").setup({
       window = {

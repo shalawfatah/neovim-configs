@@ -7,7 +7,7 @@ return {
   keys = {
     { "<leader>as", ":ASToggle<CR>", desc = "Toggle auto-save" },
   },
-  event = { "InsertLeave", "TextChanged" },
+  event = {"InsertLeave", "TextChanged" },
   opts = {
     enabled = false,
   },

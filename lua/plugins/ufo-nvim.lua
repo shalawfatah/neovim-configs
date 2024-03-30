@@ -5,6 +5,7 @@ local handler = require("utils.fold_line_number")
 return {
   "kevinhwang91/nvim-ufo",
   dependencies = { "kevinhwang91/promise-async" },
+  event = "VeryLazy",
   config = function()
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.foldingRange = {

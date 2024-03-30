@@ -2,6 +2,7 @@
 
 return {
   "jxm35/livecode.nvim",
+  event = "VeryLazy",
   config = function()
     require("livecode").setup({
       username = "shashan_kaf",

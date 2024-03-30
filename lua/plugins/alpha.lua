@@ -2,6 +2,7 @@
 
 -- local rick = require("utils.assets.rick")
 local keyboard = require("utils.assets.keyboard")
+-- local schwifty = require("utils.assets.schwifty")
 
 return {
   "goolord/alpha-nvim",

@@ -1,4 +1,4 @@
--- LazyGit, GIT SIGNS AND LOGS
+-- LazyGit, & GIT SIGNS
 
 return {
   {
