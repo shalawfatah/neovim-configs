@@ -3,6 +3,7 @@
 
 return {
   "numToStr/Comment.nvim",
+  event = "VeryLazy",
   config = function()
     local opts = {
       toggler = { line = "<leader>/" },
