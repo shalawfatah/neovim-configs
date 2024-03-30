@@ -3,6 +3,7 @@
 return {
   {
     "kdheepak/lazygit.nvim",
+    event = "VeryLazy",
     cmd = {
       "LazyGit",
       "LazyGitConfig",
@@ -13,6 +14,7 @@ return {
   },
   {
     "lewis6991/gitsigns.nvim",
+    event = "VeryLazy",
     config = function()
       require("gitsigns").setup({
         signs = {

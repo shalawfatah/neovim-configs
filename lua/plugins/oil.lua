@@ -3,5 +3,6 @@
 
 return {
   "stevearc/oil.nvim",
+  event = "VeryLazy",
   config = true
 }

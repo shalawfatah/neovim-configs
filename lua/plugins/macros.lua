@@ -2,6 +2,7 @@
 
 return {
   "kr40/nvim-macros",
+  event = "VeryLazy",
   cmd = {"MacroSave", "MacroYank", "MacroSelect", "MacroDelete"},
   opts = {
     json_file_path = vim.fs.normalize(vim.fn.stdpath("config") .. "/macros.json"),

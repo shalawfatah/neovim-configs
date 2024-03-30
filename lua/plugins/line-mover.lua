@@ -3,4 +3,5 @@
 
 return {
   "hinell/move.nvim",
+  event = "VeryLazy"
 }

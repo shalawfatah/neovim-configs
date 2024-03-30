@@ -2,6 +2,7 @@
 
 return {
   "michaelrommel/nvim-silicon",
+  event = "VeryLazy",
   lazy = true,
   cmd = "Silicon",
   config = function()

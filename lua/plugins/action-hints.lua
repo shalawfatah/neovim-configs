@@ -2,6 +2,7 @@
 
 return {
   "roobert/action-hints.nvim",
+  event = "VeryLazy",
   config = function()
     require("action-hints").setup({
       template = {

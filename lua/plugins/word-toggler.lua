@@ -5,6 +5,7 @@ local toggledWords = require("utils.toggled_words")
 
 return {
   "elentok/togglr.nvim",
+  event = "VeryLazy",
   opts = {
     register = "t",
     debug = false,
