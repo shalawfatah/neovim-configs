@@ -14,34 +14,34 @@ Some images from the the final configuration:
 ### Features
 The final config has these features provided by the mentioned plugins: 
 
-- [x] Fuzzy search for words `<leader>lg` using Telescope. 
+- [x] The IDE loads under 80ms
 - [x] List projects/workspaces `<leader>w` using Telescope.
-- [x] Show open buffers using Telescope.  
-- [x] The IDE loads under 100ms which is fast by any comparison
+- [x] Fuzzy search for words `<leader>lg` using Telescope. 
 - [x] Undo history using telescope and undo extension `<leader>u` 
 - [x] Yank history using telescope and yank plugin `<leader>y`, using sqlite to persist sessions
 - [x] Integrated terminal using toggleterm plugin, with float `<C-\>`, vertical and horizontal choices
 - [x] Easy motion using Leap.nvim plugin `<s-two letters>`
+- [x] Show open buffers `<leader>bf` using Telescope.  
 - [x] Manage sessions using Tmux
 - [x] Screenshot of full page and partial code using silicon `<C-s>` 
 - [x] A custom look for the dashboard 
 - [x] A big file management plugin to work with large files 
 - [x] Color highlighting 
 - [x] A beautiful lua status line 
-- [x] Formatting different languages using lua formatter 
+- [x] Formatting different languages using lua formatter `<leader>ft` 
 - [x] A completion engine using nvim-cmp
 - [x] Code snippets and suggestion using lsp and nvim-cmp 
 - [x] Different LSP providers including JS,TS, Go and Python.
 - [x] Linters for JS, TS, Golang and Python using treesitter 
-- [x] Folding and unfolding using the nvim-ufo plugin 
-- [x] Markdown preview through a plugin 
-- [x] File explorer through neo-tree plugin 
+- [x] Folding and unfolding using the nvim-ufo plugin `<za>` 
+- [x] Markdown preview through a plugin `<leader>md`
+- [x] File explorer through neo-tree plugin `<leader>b`
 - [x] Auto pairs and tags using two different plugins 
 - [x] A smooth scrolling process using a plugin 
-- [x] A theme using Catppuccing theme, icons using web-devicons, different colors for different modes
-- [x] A file editor using oil nvim plugin 
+- [x] A theme using Catppuccing theme, icons using web-devicons
+- [x] A file editor using oil nvim plugin `<leader>o` 
 - [x] Pair programming and sharing code using a plugin 
-- [x] Live server using a plugin 
+- [x] Live server using a plugin
 - [x] Set up documentation using a plugin 
 - [x] Auto-save functionality 
 - [x] Ability to open URLs using a plugin 
@@ -58,7 +58,7 @@ The final config has these features provided by the mentioned plugins:
 - [x] Commenting and un-commenting lines, blocks using a plugin 
 - [x] The ability to rename code throughout the project, find where they are dfined, and all their references throughout the project, along with symbol tree and other features like types and structure.
 - [x] The ability to refactor code using refactoring plugin. 
-- [x] Marking and demakring files have better UI experience with mark column icons. 
+- [x] Marking and demakring files have better UI experience with mark column icons.`<m&letter>` 
 - [x] Hiding/Unhiding nested fold numbers through the use of a plugin 
 
 ### How To
