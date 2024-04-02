@@ -14,14 +14,16 @@ Some images from the the final configuration:
 ### Features
 The final config has these features provided by the mentioned plugins: 
 
-- [x] Fuzzy search for words, buffers, commands and projects/workspaces using `telescope`
+- [x] Fuzzy search for words `<leader>lg` using Telescope. 
+- [x] List projects/workspaces `<leader>w` using Telescope.
+- [x] Show open buffers using Telescope.  
 - [x] The IDE loads under 100ms which is fast by any comparison
-- [x] Undo history using telescope and undo extension 
-- [x] Yank history using telescope and yank plugin, using sqlite to persist yanks throughout different sessions
-- [x] Integrated terminal using toggleterm plugin, with float, vertical and horizontal choices
-- [x] Easy motion using Leap.nvim plugin
+- [x] Undo history using telescope and undo extension `<leader>u` 
+- [x] Yank history using telescope and yank plugin `<leader>y`, using sqlite to persist sessions
+- [x] Integrated terminal using toggleterm plugin, with float `<C-\>`, vertical and horizontal choices
+- [x] Easy motion using Leap.nvim plugin `<s-two letters>`
 - [x] Manage sessions using Tmux
-- [x] Screenshot of full page and partial code using silicon 
+- [x] Screenshot of full page and partial code using silicon `<C-s>` 
 - [x] A custom look for the dashboard 
 - [x] A big file management plugin to work with large files 
 - [x] Color highlighting 
