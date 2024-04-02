@@ -14,7 +14,7 @@ Some images from the the final configuration:
 ### Features
 The final config has these features provided by the mentioned plugins: 
 
-- [x] The IDE loads under 80ms
+- [x] The IDE loads under 50ms
 - [x] List projects/workspaces `<leader>w` using Telescope.
 - [x] Fuzzy search for words `<leader>lg` using Telescope. 
 - [x] Undo history using telescope and undo extension `<leader>u` 
@@ -56,7 +56,7 @@ The final config has these features provided by the mentioned plugins:
 - [x] Toggling words to opposite, like `true` to `false` and `<` to `>`
 - [x] Debugger for Golang and Javascript 
 - [x] Commenting and un-commenting lines, blocks using a plugin 
-- [x] The ability to rename code throughout the project, find where they are dfined, and all their references throughout the project, along with symbol tree and other features like types and structure.
+- [x] The ability to rename code throughout the project, find where they are defined, and all their references throughout the project, along with symbol tree and other features like types and structure.
 - [x] The ability to refactor code using refactoring plugin. 
 - [x] Marking and demakring files have better UI experience with mark column icons.`<m&letter>` 
 - [x] Hiding/Unhiding nested fold numbers through the use of a plugin 

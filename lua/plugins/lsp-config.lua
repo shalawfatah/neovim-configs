@@ -3,6 +3,7 @@
 return {
   {
     "williamboman/mason.nvim",
+    event = "VeryLazy",
     config = true,
   },
   {
@@ -18,6 +19,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    event = "VeryLazy",
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")

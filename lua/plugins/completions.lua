@@ -1,8 +1,13 @@
--- COMPLETIONS, CODE SUGGESTION FOR DIFFERENT LANGUAGES 
+-- COMPLETIONS, CODE SUGGESTION FOR DIFFERENT LANGUAGES
 
 return {
-  { "hrsh7th/cmp-nvim-lsp" },
-  { "hrsh7th/cmp-buffer",
+  {
+    "hrsh7th/cmp-nvim-lsp",
+    event = "VeryLazy",
+  },
+  {
+    "hrsh7th/cmp-buffer",
+    event = "VeryLazy",
   },
   {
     "L3MON4D3/LuaSnip",
@@ -16,6 +21,7 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
+    event = "VeryLazy",
     config = function()
       local cmp = require("cmp")
       require("luasnip.loaders.from_vscode").lazy_load()
