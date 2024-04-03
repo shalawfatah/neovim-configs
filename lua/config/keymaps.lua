@@ -11,7 +11,6 @@ key("n", "<leader>h", ":Telescope help_tags<CR>", opts) -- SHOW HELP TAGS
 key("n", "<leader>u", ":Telescope undo<CR>", opts) -- SHOW UNDO TREE
 key("n", "<leader>w", ":Telescope projects<CR>", opts) -- SHOW PROJECTS
 key("n", "<leader>y", ":Telescope neoclip<CR>", opts) -- SHOW YANK TREE
-key(nv, "<leader>rr", [[:lua require('telescope').extensions.refactoring.refactors()<CR>]], opts)
 -- LSP KEYBINDINGS
 key("n", "K", buf .. "hover()<CR>", opts) -- HOVER
 key("n", "gd", buf .. "definition()<CR>", opts) -- WHERE IS THE CODE DEFINED
@@ -48,3 +47,4 @@ key("n", "<leader>nh", [[:nohl <CR>]], opts) -- GET RID OF HIGHTLIGHTS
 key("n", "<S-Up>", [[:lua require("togglr").toggle_word()<CR>]], opts) -- TOGGLE WORD
 key(nv, "<leader>tr", [[:Trim<CR>]], opts) -- TRIM TRAILING SPACE
 key(nv, "<leader>d", [[:bd<CR>]], opts) -- DELETE CURRENT BUFFER (CLOSE FILE)
+key(nv, "<S-H>", ':lua require("utils.zen_mode").ToggleLastStatus()<CR>', opts)
