@@ -6,6 +6,7 @@ local nv = { "n", "v" }
 -- TELESCOPE KEYBINDINGS
 key("n", "<C-p>", ":Telescope find_files<CR>", opts) -- SHOW BUFFERS IN THE PROJECT
 key("n", "<leader>lg", ":Telescope live_grep<CR>", opts) -- LIVE SEARCH IN ENTIRE PROJECT
+key("n", "<leader>fw", ":Telescope grep_string<CR>", opts) -- SHOW YANK TREE
 key("n", "<leader>bf", ":Telescope buffers<CR>", opts) -- SHOW OPEN BUFFERS
 key("n", "<leader>h", ":Telescope help_tags<CR>", opts) -- SHOW HELP TAGS
 key("n", "<leader>u", ":Telescope undo<CR>", opts) -- SHOW UNDO TREE

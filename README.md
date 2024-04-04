@@ -60,7 +60,8 @@ The final config has these features provided by the mentioned plugins:
 - [x] The ability to rename code throughout the project, find where they are defined, and all their references throughout the project, along with symbol tree and other features like types and structure.
 - [x] The ability to refactor code using refactoring plugin. 
 - [x] Marking and demakring files have better UI experience with mark column icons.`<m&letter>` 
-- [x] Hiding/Unhiding nested fold numbers through the use of a plugin 
+- [x] Hiding/Unhiding nested fold numbers through the use of a plugin
+- [x] Go to last edit location `<C-o>` and back `<C-i>`.
 
 ### How To
 
