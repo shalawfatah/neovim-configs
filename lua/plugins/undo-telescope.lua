@@ -1,4 +1,4 @@
--- UNDO USING TELESCOPE 
+-- UNDO USING TELESCOPE
 
 return {
   {
@@ -7,9 +7,5 @@ return {
     config = function()
       require("telescope").load_extension("undo")
     end,
-  },
-  {
-    "tzachar/highlight-undo.nvim",
-    opts = {},
   },
 }
