@@ -1,6 +1,6 @@
 -- LOCAL VARIABLES
 local key = vim.keymap.set
-local opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = true, nowait = true }
 local buf = ":lua vim.lsp.buf."
 local nv = { "n", "v" }
 -- TELESCOPE KEYBINDINGS
@@ -39,11 +39,11 @@ key(nv, "<C-v>", [[:ToggleTerm size=40 direction=vertical<CR>]], opts)
 -- DEBUGGING KEYBINDINGS
 key("n", "<leader>dt", [[:lua require("dap").toggle_breakpoint()<CR>]], opts)
 key("n", "<leader>dc", [[:lua require("dap").continue()<CR>]], opts)
--- UTILITY KEYS
+-- UTILITY KYES
 key(nv, "<leader>o", ":Oil<CR>", opts) -- FILE EDITING
 key(nv, "<C-s>", ":Silicon<CR>", opts) -- SCREENSHOT
-key(nv, "<leader>b", ":Neotree filesystem toggle<CR>", opts) -- EXPLORER
 key("n", "<leader>md", ":MarkdownPreviewToggle<CR>", opts) -- MARKDOWN TOGGLE
+key(nv, "<leader>b", ":Neotree filesystem toggle<CR>", opts) -- EXPLORER
 key("n", "<leader>nh", [[:nohl <CR>]], opts) -- GET RID OF HIGHTLIGHTS
 key("n", "<S-Up>", [[:lua require("togglr").toggle_word()<CR>]], opts) -- TOGGLE WORD
 key(nv, "<leader>tr", [[:Trim<CR>]], opts) -- TRIM TRAILING SPACE
