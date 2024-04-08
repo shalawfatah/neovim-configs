@@ -37,8 +37,8 @@ key(nv, "<C-/>", [[:ToggleTerm direction=float<CR>]], opts)
 key(nv, "<C-h>", [[:ToggleTerm direction=horizontal<CR>]], opts)
 key(nv, "<C-v>", [[:ToggleTerm size=40 direction=vertical<CR>]], opts)
 -- DEBUGGING KEYBINDINGS
-key("n", "<leader>dt", [[:lua require("dap").toggle_breakpoint()<CR>]], opts)
-key("n", "<leader>dc", [[:lua require("dap").continue()<CR>]], opts)
+key("n", "<C-d>", [[:lua require("dap").toggle_breakpoint()<CR>]], opts)
+key("n", "<C-dc>", [[:lua require("dap").continue()<CR>]], opts)
 -- UTILITY KYES
 key(nv, "<leader>o", ":Oil<CR>", opts) -- FILE EDITING
 key(nv, "<C-s>", ":Silicon<CR>", opts) -- SCREENSHOT
