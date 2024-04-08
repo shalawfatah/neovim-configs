@@ -21,7 +21,7 @@ The final config has these features provided by the mentioned plugins:
 - [x] Yank history using telescope and yank plugin `<leader>y`, using sqlite to persist sessions
 - [x] Integrated terminal using toggleterm plugin, with float `<C-\>`, vertical and horizontal choices
 - [x] Easy motion using Leap.nvim plugin `<s-two letters>`
-- [x] Zen mode `<S-H>`, by turning off status line, marks column, & fold column.
+- [x] Zen mode `<S-H>`, by turning off status line, and only the working paragraph will be focused.
 - [x] Show open buffers `<leader>bf` using Telescope.  
 - [x] Manage sessions using Tmux
 - [x] Screenshot of full page and partial code using silicon `<C-s>` 
