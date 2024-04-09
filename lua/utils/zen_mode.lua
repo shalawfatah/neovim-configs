@@ -1,3 +1,5 @@
+-- ZEN Mode 
+
 local M = {}
 
 function M.ToggleLastStatus()
