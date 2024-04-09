@@ -14,55 +14,57 @@ Some images from the the final configuration:
 ### Features
 The final config has these features provided by the mentioned plugins: 
 
-- [x] The IDE loads under 50ms
+- [x] The IDE loads under 40ms
 - [x] List projects/workspaces `<leader>w` using Telescope.
 - [x] Fuzzy search for words `<leader>lg` using Telescope. 
-- [x] Undo history using telescope and undo extension `<leader>u` 
-- [x] Yank history using telescope and yank plugin `<leader>y`, using sqlite to persist sessions
-- [x] Integrated terminal using toggleterm plugin, with float `<C-\>`, vertical and horizontal choices
-- [x] Easy motion using Leap.nvim plugin `<s-two letters>`
-- [x] Zen mode `<S-H>`, by turning off status line, and only the working paragraph will be focused.
-- [x] Show open buffers `<leader>bf` using Telescope.  
-- [x] Manage sessions using Tmux
-- [x] Screenshot of full page and partial code using silicon `<C-s>` 
-- [x] A custom look for the dashboard 
-- [x] A big file management plugin to work with large files 
-- [x] Color highlighting 
-- [x] A beautiful lua status line 
-- [x] Formatting different languages using lua formatter `<leader>ft` 
-- [x] A completion engine using nvim-cmp
-- [x] Code snippets and suggestion using lsp and nvim-cmp 
+- [x] Undo history using telescope and undo extension `<leader>u`. 
+- [x] Yank history using telescope and yank plugin `<leader>y`.
+- [x] Integrated terminal using toggleterm plugin, with float `<C-\>`, vertical and horizontal choices.
+- [x] Easy motion using Leap.nvim plugin `<s-two letters>`.
+- [x] Zen mode `<S-H>`, turns off statusline, everything else is grayed out except the working paragraph.
 - [x] Different LSP providers including JS,TS, Go and Python.
 - [x] Linters for JS, TS, Golang and Python using treesitter 
+- [x] A file editor using oil nvim plugin `<leader>o`, which uses same vim motions. 
+- [x] Git management, including logs, signs, conflicts and blame using different plugins 
+- [x] A completion engine using nvim-cmp
+- [x] Formatting different languages using lua formatter `<leader>ft` 
+- [x] Code snippets and suggestion using lsp and nvim-cmp 
 - [x] Folding and unfolding using the nvim-ufo plugin `<za>` 
-- [x] Markdown preview through a plugin `<leader>md`
+- [x] Auto-save functionality 
+- [x] Multi-cursor using visual-multi plugin 
+- [x] Manage sessions using Tmux
+- [x] Screenshot of full page and partial code using silicon `<C-s>` 
 - [x] File explorer through neo-tree plugin `<leader>b`
+- [x] The ability to rename, find where they are defined, and all their references throughout the project, along with symbol tree and other features like types and structure.
+- [x] Marking and demakring files have better UI experience with mark column icons.`<m&letter>` 
+- [x] A customizable look for the dashboard with Catppuccin theme.  
+- [x] A big file management plugin to work with large files 
+- [x] Hiding/Unhiding nested fold numbers through the use of a plugin
+- [x] Show open buffers `<leader>bf` using Telescope.
+- [x] A beautiful lua status line 
+- [x] Markdown preview through a plugin `<leader>md`
 - [x] Auto pairs and tags using two different plugins 
+- [x] Moving lines and words up and down, left and right using a plugin 
 - [x] A smooth scrolling process using a plugin 
-- [x] A theme using Catppuccing theme, icons using web-devicons
-- [x] A file editor using oil nvim plugin `<leader>o` 
 - [x] Pair programming and sharing code using a plugin 
 - [x] Live server using a plugin
 - [x] Set up documentation using a plugin 
-- [x] Auto-save functionality 
+- [x] Commenting and un-commenting lines, blocks using a plugin 
 - [x] Ability to open URLs using a plugin 
-- [x] Multi-cursor using visual-multi plugin 
 - [x] Storing, re-using and managing macros using a plugin 
 - [x] Notification system using noice plugin 
-- [x] Git management, including logs, signs, conflicts and blame using different plugins 
 - [x] Improving vim.ui interface, including input and select using a plugin 
 - [x] Action and reference hints using a plugin 
-- [x] Moving lines and words up and down, left and right using a plugin 
 - [x] Trimming trailing spaces, last or first empty lines using a plugin 
 - [x] Toggling words to opposite, like `true` to `false` and `<` to `>`
 - [x] Debugger for Golang and Javascript 
-- [x] Commenting and un-commenting lines, blocks using a plugin 
-- [x] The ability to rename code throughout the project, find where they are defined, and all their references throughout the project, along with symbol tree and other features like types and structure.
 - [x] The ability to refactor code using refactoring plugin. 
-- [x] Marking and demakring files have better UI experience with mark column icons.`<m&letter>` 
-- [x] Hiding/Unhiding nested fold numbers through the use of a plugin
 - [x] Go to last edit location `<C-o>` and back `<C-i>`.
 
+### Planned Features 
+- [x] Add persistence to yank and undo history using SQLITE 
+- [x] Manage sessions better using Tmux
+ 
 ### How To
 
 - Install [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip)
