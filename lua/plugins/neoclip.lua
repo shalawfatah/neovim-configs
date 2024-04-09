@@ -3,7 +3,14 @@
 
 return {
   "AckslD/nvim-neoclip.lua",
-  event = "VeryLazy",
-  dependencies = { { "kkharji/sqlite.lua", module = "sqlite" } },
-  config = true,
+  requires = {
+    { "kkharji/sqlite.lua", module = "sqlite" },
+  },
+  config = function()
+    require("neoclip").setup({
+      -- history = 1000,
+      -- enable_persistent_history = true,
+      -- continuous_sync = true,
+    })
+  end,
 }

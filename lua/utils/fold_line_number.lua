@@ -1,3 +1,5 @@
+-- TEXT & MARK NEXT TO THE FOLDED BLOCKS 
+
 local handler = function(virtText, lnum, endLnum, width, truncate)
   local newVirtText = {}
   local suffix = ("  %d"):format(endLnum - lnum)

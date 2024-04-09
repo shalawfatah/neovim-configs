@@ -13,5 +13,5 @@ opt.number = true
 vim.g.mapleader = " "
 vim.o.signcolumn = "yes"
 opt.foldcolumn = '1'
-opt.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
+opt.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
 opt.foldlevelstart = 20
