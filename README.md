@@ -12,21 +12,21 @@ Some images from the the final configuration:
 </section>
 
 ### Features
-The final config has these features provided by the mentioned plugins: 
+Some of the most important features of this configuration. Other fetures are planned and on the way: 
 
 - [x] The IDE loads under 40ms.
-- [x] List projects/workspaces `<leader>w`, files `<leader>p`, search words `<leader>lg` using Telescope.
+- [x] List projects/workspaces `<leader>w`, files `<C-p>`, search words `<leader>lg` using Telescope.
 - [x] Undo history using telescope and undo extension `<leader>u`. 
 - [x] Yank history using telescope and yank plugin `<leader>y`.
 - [x] Integrated terminal using toggleterm plugin, with float `<C-\>`, vertical and horizontal choices.
 - [x] A file editor using oil nvim plugin `<leader>o`, which uses same vim motions. 
-- [x] Git management, including logs, signs, conflicts and blame using different plugins 
+- [x] Git management, including logs, signs, conflicts and blame using different plugins, `<C-g>` for lazygit. 
 - [x] Easy motion using Leap.nvim plugin `<s-two letters>`. Moving lines and words up and down `<S-Up/Down>`.
 - [x] Zen mode `<S-H>`, turns off statusline, everything is grayed out except the working paragraph.
 - [x] Different LSP providers including JS,TS, Go and Python.
 - [x] Linters for JS, TS, Golang and Python using treesitter.
 - [x] A completion engine using nvim-cmp.
-- [x] Formatting different languages using lua formatter `<leader>ft`, trimmer to trim trailing spaces. 
+- [x] Formatting different languages using lua formatter `<leader>ft`, & a trimmer `<leader>tr` to trim. 
 - [x] Code snippets and suggestion using lsp and nvim-cmp, that can be extended. 
 - [x] Debugger for Golang and Javascript 
 - [x] Folding and unfolding using the nvim-ufo plugin `<za>`, hiding/unhiding nested fold numbers.
@@ -53,13 +53,15 @@ The final config has these features provided by the mentioned plugins:
 - [x] The ability to refactor code using refactoring plugin. 
 
 ### Planned Features 
-- [x] Add persistence to yank and undo history using SQLITE
-- [x] Add persistence to opposite word list using SQLITE
-- [x] Manage sessions better using Tmux
-- [x] Refactoring and how it woks 
-- [x] Debugger functionality test 
-- [x] Saving and Re-using macros, test for persistence
-- [x] Test documentation 
+- [ ] Add persistence to yank, undo, and opposite word history using `SQLITE`
+- [ ] Manage sessions better using `Tmux`
+- [ ] Refactoring and how it woks (Primeagen's plugin) 
+- [ ] Debugger functionality test
+- [ ] Saving and Re-using macros, test for persistence
+- [ ] Test documentation (plugin)
+- [ ] Test pair programming (plugin)
+- [ ] Quick fix and how to employ it (`octo.nvim`)
+- [ ] Check testing libraries and how they work with Neovim (like `Jest`)
 
 ### How To
 
