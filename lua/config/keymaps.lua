@@ -12,9 +12,9 @@ key("n", "<leader>h", ":Telescope help_tags<CR>", opts)         -- SHOW HELP TAG
 key("n", "<leader>u", ":Telescope undo<CR>", opts)              -- SHOW UNDO TREE
 key("n", "<leader>w", ":Telescope projects<CR>", opts)          -- SHOW PROJECTS
 key("n", "<leader>y", ":Telescope neoclip<CR>", opts)           -- SHOW YANK TREE
--- LSP KEYBINDINGS
-key("n", "K", buf .. "hover()<CR>", opts)                       -- HOVER
-key("n", "gd", buf .. "definition()<CR>", opts)                 -- WHERE IS THE CODE DEFINED
+-- LSP - Saga KEYBINDINGS
+key("n", "gd", ":Lspsaga peek_definition<CR>", opts)                       -- HOVER
+key("n", "K", ":Lspsaga hover_doc<CR>", opts)                       -- HOVER
 key("n", "gt", buf .. "type_definition()<CR>", opts)            -- WHAT IS THE TYPE OF THE CODE
 key("n", "<leader>ft", buf .. "format() <CR>", opts)            -- FORMAT CODE
 key("n", "<leader>ca", buf .. "code_action()<CR>", opts)        -- CODE ACTION IS AVAILABLE
