@@ -37,8 +37,34 @@ return {
       lspconfig.eslint.setup({
         capabilities = capabilities,
       })
-      lspconfig.gopls.setup({
+      lspconfig.pyright.setup({
         capabilities = capabilities,
+      })
+      lspconfig.intelephense.setup({
+        capabilities = capabilities,
+        flags = {
+          debounce_text_changes = 150,
+        },
+        settings = {
+          intelephense = {
+            environment = {
+              phpVersion = "8.2", -- Adjust to your PHP version
+              composerJsonPath = "./composer.json",
+            },
+            files = {
+              associations = {
+                "*.php",
+              },
+            },
+          },
+        },
+      })
+      lspconfig.clangd.setup({
+        capabilities = capabilities,
+        cmd = {
+          "clangd",
+          "--offset-encoding=utf-16",
+        },
       })
     end,
   },
@@ -46,7 +72,11 @@ return {
     'nvimdev/lspsaga.nvim',
     event = "VeryLazy",
     config = function()
-        require('lspsaga').setup({})
+      require('lspsaga').setup({
+        ui = {
+          code_action = ""
+        }
+      })
     end,
   },
 }

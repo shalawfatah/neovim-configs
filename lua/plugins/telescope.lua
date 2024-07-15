@@ -14,9 +14,7 @@ return {
       },
     },
     config = function()
-      require("telescope").setup({
-        -- options
-      })
+      require("telescope").setup({})
     end,
   },
 }

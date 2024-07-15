@@ -29,9 +29,10 @@ return {
         "gitignore",
         "query",
         "python",
-        "go",
         "sql",
         "toml",
+        "c",
+        "php",
       }
     })
   end,

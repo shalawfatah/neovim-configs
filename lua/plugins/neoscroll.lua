@@ -3,5 +3,7 @@
 return {
   "karb94/neoscroll.nvim",
   event = "VeryLazy",
-  config = true,
+  config = function ()
+    require('neoscroll').setup({})
+  end
 }

@@ -3,6 +3,7 @@
 
 return {
   "AckslD/nvim-neoclip.lua",
+  event = "VeryLazy",
   requires = {
     { "kkharji/sqlite.lua", module = "sqlite" },
   },
