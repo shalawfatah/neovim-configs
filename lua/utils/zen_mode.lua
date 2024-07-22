@@ -1,4 +1,4 @@
--- ZEN Mode 
+-- ZEN MODE 
 
 local M = {}
 
