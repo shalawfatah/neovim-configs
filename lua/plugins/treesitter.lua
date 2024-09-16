@@ -33,6 +33,9 @@ return {
         "toml",
         "c",
         "php",
+        "elixir",
+        "heex",
+        "eex",
       }
     })
   end,

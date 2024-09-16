@@ -1,20 +1,11 @@
--- LazyGit, & GIT SIGNS
-
 return {
-  {
-    "kdheepak/lazygit.nvim",
-    event = "VeryLazy",
-    cmd = {
-      "LazyGit",
-      "LazyGitConfig",
-      "LazyGitCurrentFile",
-      "LazyGitFilter",
-      "LazyGitFilterCurrentFile",
-    },
-  },
+  -- Gitsigns for Git integration in Neovim
   {
     "lewis6991/gitsigns.nvim",
     event = "VeryLazy",
+    keys = {
+      { "n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", opts }, -- Show Git line commit owner
+    },
     config = function()
       require("gitsigns").setup({
         signs = {
@@ -27,5 +18,20 @@ return {
         },
       })
     end,
+  },
+
+  -- LazyGit for Git management
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    keys = {
+      { "<C-z>", "<cmd>LazyGit<cr>", desc = "Open LazyGit" },
+    },
   },
 }

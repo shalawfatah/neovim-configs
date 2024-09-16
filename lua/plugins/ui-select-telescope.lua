@@ -5,7 +5,7 @@ return {
   event = "VeryLazy",
   config = function()
     require("telescope").setup({
-      defaults = { file_ignore_patterns = { "node_modules", "dist" } },
+      defaults = { file_ignore_patterns = { "node_modules", "dist", "deps", "_build" } },
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown({}),

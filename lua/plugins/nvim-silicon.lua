@@ -1,10 +1,15 @@
 -- TAKE SCREENSHOTS OF YOUR CODE, ALL OR IN PART: <C-s>
 
+local opts = { noremap = true, silent = true, nowait = true }
+local nv = { "n", "v" }
+
 return {
   "michaelrommel/nvim-silicon",
   event = "VeryLazy",
-  lazy = true,
   cmd = "Silicon",
+  keys = {
+    { "<C-s>", ":Silicon<CR>", opts, mode = nv }, -- SCREENSHOT
+  },
   config = function()
     require("silicon").setup({
       font = "FiraCode Nerd Font Mono; Noto Emoji=34",

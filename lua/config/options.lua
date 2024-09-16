@@ -1,4 +1,3 @@
-
 local opt = vim.opt
 
 opt.expandtab = true                                                -- Use spaces instead of tabs for indentation
@@ -13,3 +12,4 @@ vim.o.signcolumn = "yes"                                            -- Show sign
 opt.foldcolumn = '1'                                                -- Show one column for folding
 opt.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'     -- Customize fold marks
 opt.foldlevelstart = 20                                             -- Start folding at level 20
+opt.arabicshape = false
