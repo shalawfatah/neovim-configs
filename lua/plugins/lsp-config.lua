@@ -28,62 +28,48 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
 
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities,
-        settings = {
-          Lua = {
-            diagnostics = { globals = { "vim", "plugins" } },
+      local servers = {
+        lua_ls = {
+          settings = {
+            Lua = {
+              diagnostics = { globals = { "vim", "plugins" } },
+            },
           },
         },
-      })
-
-      lspconfig.tsserver.setup({
-        capabilities = capabilities,
-      })
-
-      lspconfig.eslint.setup({
-        capabilities = capabilities,
-      })
-
-      lspconfig.pyright.setup({
-        capabilities = capabilities,
-      })
-
-      lspconfig.intelephense.setup({
-        capabilities = capabilities,
-        flags = {
-          debounce_text_changes = 150,
-        },
-        settings = {
-          intelephense = {
-            environment = {
-              phpVersion = "8.2", -- Adjust to your PHP version
-              composerJsonPath = "./composer.json",
-            },
-            files = {
-              associations = {
-                "*.php",
+        tsserver = {},
+        eslint = {},
+        pyright = {},
+        intelephense = {
+          flags = {
+            debounce_text_changes = 150,
+          },
+          settings = {
+            intelephense = {
+              environment = {
+                phpVersion = "8.2",
+                composerJsonPath = "./composer.json",
+              },
+              files = {
+                associations = {
+                  "*.php",
+                },
               },
             },
           },
         },
-      })
-
-      lspconfig.clangd.setup({
-        capabilities = capabilities,
-        cmd = {
-          "clangd",
-          "--offset-encoding=utf-16",
+        clangd = {
+          cmd = { "clangd", "--offset-encoding=utf-16" },
         },
-      })
+        elixirls = {
+          cmd = { "elixir-ls" },
+        },
+      }
 
-      lspconfig.elixirls.setup({
-        capabilities = capabilities,
-        cmd = { "elixir-ls" },
-      })
+      for server, config in pairs(servers) do
+        lspconfig[server].setup(vim.tbl_deep_extend("force", { capabilities = capabilities }, config))
+      end
     end,
   },
-
   -- LSP Saga for enhanced LSP UI
   {
     "nvimdev/lspsaga.nvim",
@@ -101,19 +87,16 @@ return {
       })
     end,
   },
-
   -- Keybindings for LSP functionalities
   {
     "neovim/nvim-lspconfig",
     event = "VeryLazy",
     config = function()
       local key = vim.keymap.set
-      local opts = { noremap = true, silent = true, nowait = true }
-      local buf = ":lua vim.lsp.buf." -- BUFFER RELATED COMMANDS
 
       -- Keybindings for LSP
       key("n", "gt", buf .. "type_definition()<CR>", opts)                    -- WHAT IS THE TYPE OF THE CODE
-      key("n", "<leader>ft", buf .. "format() <CR>", opts)                    -- FORMAT CODE
+      key("n", "<leader>ft", buf .. "format()<CR>", opts)                      -- FORMAT CODE
       key("n", "<leader>ca", buf .. "code_action()<CR>", opts)                -- CODE ACTION IS AVAILABLE
       key("n", "<leader>rn", buf .. "rename()<CR>", opts)                     -- RENAME THE CODE IN ALL PLACES
       key("i", "<C-Enter>", buf .. "completion()<CR>", opts)                  -- CODE COMPLETION
