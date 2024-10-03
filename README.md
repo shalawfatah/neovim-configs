@@ -1,5 +1,14 @@
 # NEOVIM ENVIRONMENT CONFIGURATION
 This is an attempt to build a full IDE through neovim and its environment using `lazy.nvim` package manager. This IDE will not only replace your current IDE features, but adds to them. 
+
+## Why?
+An IDE should be:
+- Lightweight, minimal and intuitive. 
+- Packed with features like auto-complete, code snippets, code formatter, and linters.
+- Easy to search, browse and edit code. 
+- Easy for version management.
+- Able to customize look and extend features. 
+
 Some images from the the final configuration:
 
 <section style="display:flex; flex-direction:row; gap: 10px; flex-wrap:wrap; ">
@@ -32,7 +41,6 @@ Some of the most important features of this configuration. Other fetures are pla
 - [x] Folding and unfolding using the nvim-ufo plugin `<za>`, hiding/unhiding nested fold numbers.
 - [x] Auto-save functionality.
 - [x] Multi-cursor using visual-multi plugin 
-- [x] Manage sessions using Tmux
 - [x] Screenshot of full page and partial code using silicon `<C-s>` 
 - [x] File explorer through neo-tree plugin `<leader>b`
 - [x] The ability to rename `<leader>rn`, find references `<leader>rf` throughout the project, along with symbol tree `<leader>ds`, etc.
