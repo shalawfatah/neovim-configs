@@ -1,4 +1,4 @@
--- ZEN MODE 
+-- ZEN MODE <S-Z> call the function
 
 local M = {}
 

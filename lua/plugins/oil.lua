@@ -8,6 +8,9 @@ return {
   "stevearc/oil.nvim",
   event = "VeryLazy",
   config = true,
+  view_options = {
+    show_hidden = true
+  },
   keys = {
     { "<leader>o", ":Oil<CR>", opts, mode = nv },  -- FILE EXPLORING AND EDITING
   },
