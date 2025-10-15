@@ -18,6 +18,7 @@ return {
         "yaml",
         "html",
         "css",
+        "scss",
         "prisma",
         "markdown",
         "svelte",

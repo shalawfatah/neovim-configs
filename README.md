@@ -30,6 +30,7 @@ Some of the most important features of this configuration. Other fetures are pla
 - [x] Integrated terminal using toggleterm plugin, with float `<C-\>`, vertical and horizontal choices.
 - [x] A file editor using oil nvim plugin `<leader>o`, which uses same vim motions. 
 - [x] Git management, including logs, signs, conflicts and blame using different plugins, `<C-g>` for lazygit. 
+- [x] Docker management, with listings, images, and lots of commands, `<C-x`> for lazydocker.
 - [x] Easy motion using Leap.nvim plugin `<s-two letters>`. Moving lines and words up and down `<S-Up/Down>`.
 - [x] Zen mode `<S-H>`, turns off statusline, everything is grayed out except the working paragraph.
 - [x] Different LSP providers including JS,TS, Go and Python.

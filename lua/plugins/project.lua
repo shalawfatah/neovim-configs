@@ -2,7 +2,7 @@
 -- <leader>w TO CHECK REGISTERED WOKRSPACES
 
 return {
-  "ahmedkhalf/project.nvim",
+  "gmelodie/project.nvim",
   event = "VeryLazy",
   config = function()
     require("project_nvim").setup({

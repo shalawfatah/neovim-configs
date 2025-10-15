@@ -5,7 +5,7 @@ local opts = { noremap = true, silent = true, nowait = true }
 return {
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.6",
+    branch = "0.1.x",
     event = "VeryLazy",
     keys = {
       { "<C-p>",      ":Telescope find_files<CR>",     opts, mode = "n" }, -- SHOW DIR & FILES IN THE PROJECT

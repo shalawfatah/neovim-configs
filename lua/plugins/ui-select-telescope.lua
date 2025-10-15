@@ -1,11 +1,13 @@
--- BETTER UI FOR TELESCOPE 
+-- BETTER UI FOR TELESCOPE
 
 return {
   "nvim-telescope/telescope-ui-select.nvim",
   event = "VeryLazy",
   config = function()
     require("telescope").setup({
-      defaults = { file_ignore_patterns = { "node_modules", "dist", "deps", "_build" } },
+      defaults = {
+        file_ignore_patterns = { "node_modules", "dist", "deps", "_build", "yarn.lock", "package-lock.json" },
+      },
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown({}),
