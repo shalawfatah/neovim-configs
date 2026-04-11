@@ -1,14 +1,17 @@
--- TREESITTER HELPS WITH SYNTAX RECOGNITION FOR DIFFERENT LANGUAGES 
+-- TREESITTER HELPS WITH SYNTAX RECOGNITION FOR DIFFERENT LANGUAGES
 
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
-  event = {"BufReadPre", "BufNewFile"},
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     local config = require("nvim-treesitter.configs")
     config.setup({
       auto_install = true,
       highlight = { enable = true },
+      modules = {},
+      sync_install = false,
+      ignore_install = {},
       indent = { enable = true },
       ensure_installed = {
         "json",
@@ -37,7 +40,7 @@ return {
         "elixir",
         "heex",
         "eex",
-      }
+      },
     })
   end,
 }
