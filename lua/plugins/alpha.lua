@@ -9,9 +9,7 @@ return {
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
 
-    -- Set header
     dashboard.section.header.val = keyboard
-    -- Set menu
     dashboard.section.buttons.val = {
       dashboard.button("<leader>w", " > Project list", "<cmd>Telescope projects<CR>"),
       dashboard.button("<leader>s", " > Live Search", ":Telescope live_grep<CR>"),
@@ -21,7 +19,6 @@ return {
     }
 
     alpha.setup(dashboard.opts)
-    -- Disable folding on alpha buffer
     vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
   end,
 }
