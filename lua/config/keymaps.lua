@@ -9,9 +9,6 @@ key(nv, "<leader>d", [[:bd<CR>]], opts) -- DELETES CURRENT BUFFER (CLOSE FILE)
 key(nv, "<S-Z>", ':lua require("utils.zen_mode").ToggleLastStatus()<CR>', opts)
 key(nv, "<S-Y>", [[:%y<CR>]], opts) -- YANKS ENTIRE BUFFER
 key(nv, "<leader>v", [[:normal! ggVG$<CR>]], opts) -- HIGHLIGHTS ENTIRE BUFFER
-key(nv, "<S-F>", [[:lua vim.diagnostic.open_float()<CR>]], opts) -- SHOW DIAGNOSTICS ON CURRENT WORD
-key(nv, "<S-Q>", [[:lua vim.diagnostic.setqflist()<CR>]], opts) -- SHOW QUICK FIX LIST
-vim.keymap.set("n", "<leader>l", vim.diagnostic.open_float, opts)
 key("n", "<leader>nh", [[:nohl <CR>]], opts) -- GET RID OF HIGHTLIGHTS
 pcall(vim.keymap.del, "n", "q") -- Safe deletion
 -- Peek definition in a floating window
