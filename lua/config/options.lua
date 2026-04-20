@@ -23,3 +23,6 @@ vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { ctermfg = "red" })
 
 vim.api.nvim_set_hl(0, "LineNrRelative", { ctermfg = 236 }) -- off-white-ish
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 7 }) -- absolute line number in white
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.cmd("filetype plugin indent on")
