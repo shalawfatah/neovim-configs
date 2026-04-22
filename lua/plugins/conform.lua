@@ -32,14 +32,14 @@ return {
     },
     format_on_save = {
       timeout_ms = 500,
-      lsp_fallback = true,
+      lsp_format = "fallback", -- Use LSP only if specialized formatter isn't available
     },
   },
   keys = {
     {
       "<leader>ft",
       function()
-        require("conform").format({ async = true, lsp_fallback = true })
+        require("conform").format({ async = true, lsp_format = "fallback" })
       end,
       desc = "Format document",
     },

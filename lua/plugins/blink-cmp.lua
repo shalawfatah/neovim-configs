@@ -27,8 +27,7 @@ return {
     },
   },
   config = function()
-    local autoformat_filetypes = { "lua" }
-
+    -- Keep diagnostic UI settings
     vim.diagnostic.config({
       virtual_text = true,
       severity_sort = true,
@@ -43,32 +42,8 @@ return {
       },
     })
 
-    vim.api.nvim_create_autocmd("LspAttach", {
-      callback = function(args)
-        local client = vim.lsp.get_client_by_id(args.data.client_id)
-        if not client then
-          return
-        end
-
-        local bufopts = { buffer = args.buf }
-
-        vim.keymap.set("n", "K", function()
-          vim.lsp.buf.hover({ border = "rounded" })
-        end, bufopts)
-        vim.keymap.set({ "n", "i" }, "<C-k>", function()
-          vim.lsp.buf.signature_help({ border = "rounded" })
-        end, bufopts)
-
-        if vim.tbl_contains(autoformat_filetypes, vim.bo[args.buf].filetype) then
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = args.buf,
-            callback = function()
-              vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
-            end,
-          })
-        end
-      end,
-    })
+    -- IMPORTANT: Removed the manual LspAttach and BufWritePre autocmds here.
+    -- Conform.nvim handles this now.
 
     require("mason").setup()
     require("mason-lspconfig").setup({

@@ -12,7 +12,7 @@ return {
       modules = {},
       sync_install = false,
       ignore_install = {},
-      indent = { enable = true },
+      indent = { enable = false }, -- Set to false to fix indentation issues
       ensure_installed = {
         "json",
         "javascript",
