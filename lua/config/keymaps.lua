@@ -26,3 +26,8 @@ vim.keymap.set("n", "<leader>e", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
 -- Jump to next / previous diagnostic
 vim.keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 vim.keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+vim.keymap.set("n", "<leader>js", function()
+  vim.cmd("w")
+  vim.cmd("botright 15split | terminal node " .. vim.fn.expand("%"))
+  vim.cmd("startinsert") -- puts cursor in terminal so you can scroll/interact
+end, { desc = "Run JS file" })
